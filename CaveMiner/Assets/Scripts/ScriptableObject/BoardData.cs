@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "BoardData", menuName = "ScriptableObjects/CreateBoard")]
 public class BoardData : ScriptableObject
 {
-    public int[,] Board;
+    public int[,] Board;//0:wall,1:floor
     [SerializeField] private int boardWidth = 50;
     [SerializeField] private int boardHeight = 50;
     [SerializeField] private int roomPadding = 5;
@@ -11,6 +11,8 @@ public class BoardData : ScriptableObject
     [SerializeField] private int roomCountMax = 10;
     [SerializeField] private int roomLengthMin = 5;
     [SerializeField] private int roomLengthMax = 10;
+    [SerializeField] private int itemCountMin = 5;
+    [SerializeField] private int itemCountMax = 10;
 
 
     public int BoardWidth => boardWidth;
@@ -19,5 +21,7 @@ public class BoardData : ScriptableObject
     public int RoomCountMin => roomCountMin;
     public int RoomCountMax => roomCountMax;
     public int RoomLengthMin => roomLengthMin;
-    public int RoomLengthMax => roomLengthMin;
+    public int RoomLengthMax => roomLengthMax;
+    public int ItemCountMax => itemCountMax;
+    public int ItemCountMin => itemCountMin;
 }
