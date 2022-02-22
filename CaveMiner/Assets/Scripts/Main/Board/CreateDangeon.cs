@@ -1,13 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+///Boardにオブジェクトのオブジェクト位置を記録
 public class CreateDangeon : MonoBehaviour
 {
     private BoardData boardData;
     public void CreateRoom()
     {
         int roomCount = Random.Range(boardData.RoomCountMin, boardData.RoomCountMin);
+
+        int GrobalRoadPointX = Random.Range(boardData.BoardWidth / 4, boardData.BoardHeight * 3 / 4);
+        int GrobalRoadPointY = Random.Range(boardData.BoardWidth / 4, boardData.BoardHeight * 3 / 4);
+
         for (int i = 0; i < roomCount; i++)
         {
             int roomWidth = Random.Range(boardData.RoomLengthMin, boardData.RoomLengthMax);
@@ -26,5 +28,10 @@ public class CreateDangeon : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void CreateRoad(int roomStartX, int roomStartY, int GrobalRoadPointX, int GrobalRoadPointY)
+    {
+
     }
 }
