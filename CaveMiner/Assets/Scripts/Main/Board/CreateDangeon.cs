@@ -1,6 +1,6 @@
 using UnityEngine;
 ///Boardにオブジェクトのオブジェクト位置を記録
-public class CreateDangeon : MonoBehaviour
+public class CreateDangeon
 {
     private BoardData boardData;
     public void CreateRoom()
@@ -27,6 +27,7 @@ public class CreateDangeon : MonoBehaviour
                     boardData.Board[roomStartX + x, roomStartY + y] = 1;
                 }
             }
+            LayoutObject(roomStartX, roomStartY, roomWidth, roomHeight, itemCount, 2);//BreakWallを配置
         }
     }
     private void CreateRoad(int roadStartX, int roadStartY, int GrobalRoadPointX, int GrobalRoadPointY)
@@ -73,5 +74,20 @@ public class CreateDangeon : MonoBehaviour
             roadStartPoint--;
         }
         return roadStartPoint;
+    }
+    private void LayoutObject(int roomStartX, int roomStartY, int roomWidth, int roomHeight, int itemCount, int objectType)
+    {
+        int count = 0;
+        while (count < itemCount)
+        {
+            //道を塞がないように1開ける
+            int x = Random.Range(roomStartX + 1, roomStartX + roomWidth - 1);
+            int y = Random.Range(roomStartY + 1, roomStartY + roomHeight - 1);
+            if (boardData.Board[x, y] == 1)
+            {
+                boardData.Board[x, y] = objectType;
+                count++;
+            }
+        }
     }
 }
