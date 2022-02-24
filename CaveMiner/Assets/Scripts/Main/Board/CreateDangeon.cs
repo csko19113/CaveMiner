@@ -18,6 +18,10 @@ public class CreateDangeon
             int roomStartX = Random.Range(boardData.RoomPadding, boardData.BoardWidth - roomWidth - boardData.RoomPadding);
             int roomStartY = Random.Range(boardData.RoomPadding, boardData.BoardHeight - roomHeight - boardData.RoomPadding);
 
+            //roomの中に道の開始点を作る
+            int roadStartPointX = Random.Range(roomStartX, roomStartX + roomWidth);
+            int roadStartPointY = Random.Range(roomStartY, roomStartY + roomHeight);
+
             int itemCount = Random.Range(boardData.ItemCountMin, boardData.ItemCountMax);
 
             for (int x = 0; x < roomWidth; x++)
@@ -27,6 +31,7 @@ public class CreateDangeon
                     boardData.Board[roomStartX + x, roomStartY + y] = 1;
                 }
             }
+            CreateRoad(roadStartPointX, roadStartPointY, GrobalRoadPointX, GrobalRoadPointY);
             LayoutObject(roomStartX, roomStartY, roomWidth, roomHeight, itemCount, 2);//BreakWallを配置
         }
     }

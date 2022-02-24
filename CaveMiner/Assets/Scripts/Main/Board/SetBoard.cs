@@ -1,18 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+///Boardに従いオブジェクトをインスタンス化するクラス
 public class SetBoard : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private BoardData boardData;
+    public void SetObject()
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
