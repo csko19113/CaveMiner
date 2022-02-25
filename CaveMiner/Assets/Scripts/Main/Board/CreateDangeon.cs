@@ -1,8 +1,8 @@
 using UnityEngine;
 ///Boardにオブジェクトのオブジェクト位置を記録
-public class CreateDangeon
+public class CreateDangeon : MonoBehaviour
 {
-    private BoardData boardData;
+    [SerializeField] private BoardData boardData;
     public void CreateRoom()
     {
         int roomCount = Random.Range(boardData.RoomCountMin, boardData.RoomCountMin);
