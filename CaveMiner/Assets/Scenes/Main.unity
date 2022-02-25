@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 950959378}
   - component: {fileID: 950959377}
   - component: {fileID: 950959376}
+  - component: {fileID: 950959380}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -254,7 +255,7 @@ MonoBehaviour:
   breakableWall: {fileID: 0}
   player: {fileID: 0}
   goal: {fileID: 0}
-  boardData: {fileID: 0}
+  boardData: {fileID: 11400000, guid: 43b6aed774858d24f9ec3aa30ed591ea, type: 2}
 --- !u!114 &950959378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a718c1a4519e124c8a4b145da6e22a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boardData: {fileID: 0}
+  boardData: {fileID: 11400000, guid: 43b6aed774858d24f9ec3aa30ed591ea, type: 2}
 --- !u!4 &950959379
 Transform:
   m_ObjectHideFlags: 0
@@ -282,3 +283,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &950959380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950959375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41ecf83975ffb0b4292f8100ded49617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boardData: {fileID: 11400000, guid: 43b6aed774858d24f9ec3aa30ed591ea, type: 2}
