@@ -238,6 +238,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45da6b28c68ad8542ad153b585dab8cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setBoard: {fileID: 950959377}
+  reserMap: {fileID: 950959378}
+  createDangeon: {fileID: 950959380}
 --- !u!114 &950959377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,11 +253,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe1cbba7252739418e1c6ee5bc306d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallObject: {fileID: 0}
-  floorObject: {fileID: 0}
-  breakableWall: {fileID: 0}
-  player: {fileID: 0}
-  goal: {fileID: 0}
+  wallObject: {fileID: 6194261009683428115, guid: 4d255db4b93c7a7418b3d8ac7f713ab0, type: 3}
+  floorObject: {fileID: 2168256377428059381, guid: 7d5eb7b51313681479f80e3cf9e21abe, type: 3}
+  breakableWall: {fileID: 905912210842031171, guid: 83eaa925e469f3f498f2fa8111c13ea4, type: 3}
+  player: {fileID: 8362794854597534245, guid: eb9ff520b1d22a241b30fead6addd85b, type: 3}
+  goal: {fileID: 3640921238713302024, guid: 2102f50c46bbec44589d8441f3d2a8f2, type: 3}
   boardData: {fileID: 11400000, guid: 43b6aed774858d24f9ec3aa30ed591ea, type: 2}
 --- !u!114 &950959378
 MonoBehaviour:
