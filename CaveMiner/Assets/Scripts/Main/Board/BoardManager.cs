@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace Cave.Main
+namespace Cave.Main.Board
 {
     public class BoardManager : MonoBehaviour
     {
