@@ -9,7 +9,7 @@ namespace Cave.Main.Chara
         [SerializeField] private int vertical;
         public int Horizontal => horizontal;
         public int Vertical => vertical;
-        private void Update()
+        public void InputMoveDirection()
         {
             horizontal = (int)Input.GetAxisRaw("Horizontal");
             vertical = (int)Input.GetAxisRaw("Vertical");
