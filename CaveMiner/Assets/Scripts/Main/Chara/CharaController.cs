@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Cave.Main.Board;
 using UnityEngine;
 
 namespace Cave.Main.Chara
@@ -12,9 +11,9 @@ namespace Cave.Main.Chara
         void Update()
         {
             charaInput.InputMoveDirection();//入力を受け取る
-            if (charaInput.Vertical != 0 && charaInput.Horizontal != 0)
+            if (charaInput.Vertical != 0 || charaInput.Horizontal != 0)
             {
-                //charaMove.AttemptMove<>(charaInput.Horizontal, charaInput.Vertical);
+                charaMove.AttemptMove<BreakableWall>(charaInput.Horizontal, charaInput.Vertical);
             }
         }
     }
