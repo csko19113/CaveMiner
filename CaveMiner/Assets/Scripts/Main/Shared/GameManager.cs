@@ -23,6 +23,9 @@ namespace Cave.Main.Shared
             {
                 Destroy(this.gameObject);
             }
+            second = gameParam.Second;
+            playerTurn = gameParam.PlayerTurn;
+
             boardManager.Create();
         }
     }
