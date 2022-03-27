@@ -1,18 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class GameParam : MonoBehaviour
+[CreateAssetMenu(fileName = "GameParam", menuName = "ScriptableObjects/GameParam")]
+public class GameParam : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] private int second = 100;
+    [SerializeField] private bool playerTurn = true;
+    public int Second => second;
+    public bool PlayerTurn => playerTurn;
 }

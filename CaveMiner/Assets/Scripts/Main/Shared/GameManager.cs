@@ -8,11 +8,10 @@ namespace Cave.Main.Shared
     public class GameManager : MonoBehaviour
     {
         public GameManager instance;
-        public bool PlayerTurn => playerTurn;
-        public int Second => second;
-        [SerializeField] private bool playerTurn;//scriptable
+        [SerializeField] private bool playerTurn;
         [SerializeField] private BoardManager boardManager;
-        [SerializeField] private int second;//scriptable
+        [SerializeField] private int second;
+        [SerializeField] private GameParam gameParam;
         private void Awake()
         {
             if (instance == null)
