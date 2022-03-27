@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charaMove: {fileID: 7298720051868774237}
   charaInput: {fileID: 3046306007610649781}
+  gameParam: {fileID: 11400000, guid: 89f4c0c8997973a4d90973b21467d83e, type: 2}
 --- !u!114 &7298720051868774237
 MonoBehaviour:
   m_ObjectHideFlags: 0

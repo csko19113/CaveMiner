@@ -23,10 +23,14 @@ namespace Cave.Main.Shared
             {
                 Destroy(this.gameObject);
             }
-            second = gameParam.Second;
-            playerTurn = gameParam.PlayerTurn;
+            second = gameParam.second;
+            playerTurn = gameParam.playerTurn;
 
             boardManager.Create();
+        }
+        private void Update()
+        {
+            if (gameParam.playerTurn == false) gameParam.playerTurn = true;
         }
     }
 }
