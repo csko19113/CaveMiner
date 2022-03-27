@@ -5,7 +5,6 @@ using UnityEngine;
 public class BreakableWall : MonoBehaviour
 {
     [SerializeField] private int hp;
-    [SerializeField] private Sprite dmgSprite;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
     private enum WALLTYPE

@@ -8,11 +8,7 @@ namespace Cave.Main.Board
         [SerializeField] private SetBoard setBoard;
         [SerializeField] private ReserMap reserMap;
         [SerializeField] private CreateDangeon createDangeon;
-        void Start()
-        {
-            Create();
-        }
-        private void Create()
+        public void Create()
         {
             reserMap.ResetMap();
             createDangeon.CreateRoom();
