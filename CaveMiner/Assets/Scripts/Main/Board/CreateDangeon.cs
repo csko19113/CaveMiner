@@ -5,6 +5,7 @@ public class CreateDangeon : MonoBehaviour
     [SerializeField] private BoardData boardData;
     public void CreateRoom()
     {
+        int enemyCount = 1;//部屋当たりの敵の数
         int roomCount = Random.Range(boardData.RoomCountMin, boardData.RoomCountMin);
 
         int GrobalRoadPointX = Random.Range(boardData.BoardWidth / 4, boardData.BoardHeight * 3 / 4);
@@ -28,11 +29,12 @@ public class CreateDangeon : MonoBehaviour
             {
                 for (int y = 0; y < roomHeight; y++)
                 {
-                    boardData.Board[roomStartX + x, roomStartY + y] = 1;
+                    boardData.Board[roomStartX + x, roomStartY + y] = 1;//floor
                 }
             }
             CreateRoad(roadStartPointX, roadStartPointY, GrobalRoadPointX, GrobalRoadPointY);
             LayoutObject(roomStartX, roomStartY, roomWidth, roomHeight, itemCount, 2);//BreakWallを配置
+            LayoutObject(roomStartX, roomStartY, roomWidth, roomHeight, enemyCount, 3);
         }
     }
     private void CreateRoad(int roadStartX, int roadStartY, int GrobalRoadPointX, int GrobalRoadPointY)

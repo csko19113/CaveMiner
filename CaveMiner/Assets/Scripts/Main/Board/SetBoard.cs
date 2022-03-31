@@ -30,6 +30,10 @@ public class SetBoard : MonoBehaviour
                 {
                     Instantiate(breakableWall, new Vector3(x, y, 0), Quaternion.identity);
                 }
+                else if (boardData.Board[x, y] == 3)//enemy
+                {
+
+                }
             }
         }
     }
