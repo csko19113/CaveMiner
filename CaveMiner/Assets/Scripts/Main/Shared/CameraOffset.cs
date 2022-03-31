@@ -9,7 +9,7 @@ namespace Cave.Main.Shared
         {
             targetObject = GameObject.FindWithTag("Player");
         }
-        public void UpateCameraOffset()
+        private void Update()
         {
             var offset = new Vector3(targetObject.transform.position.x, targetObject.transform.position.y, transform.position.z);
             transform.position = offset;

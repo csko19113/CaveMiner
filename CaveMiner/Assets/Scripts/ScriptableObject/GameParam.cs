@@ -4,5 +4,5 @@ using UnityEngine;
 public class GameParam : ScriptableObject
 {
     public int second = 100;
-    public bool playerTurn = true;
+    public bool playerTurn;
 }

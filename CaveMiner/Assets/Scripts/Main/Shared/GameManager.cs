@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cave.Main.Board;
+using Cave.Main.Chara;
 using Cysharp.Threading.Tasks;
 
 namespace Cave.Main.Shared
@@ -11,8 +12,7 @@ namespace Cave.Main.Shared
         public GameManager instance;
         [SerializeField] private bool playerTurn;
         [SerializeField] private BoardManager boardManager;
-        [SerializeField] private CameraOffset cameraOffset;
-        [SerializeField] private CharacterController characterController;
+        [SerializeField] private CharaController charaController;
         [SerializeField] private int second;
         [SerializeField] private GameParam gameParam;
         private void Awake()
@@ -30,17 +30,23 @@ namespace Cave.Main.Shared
             playerTurn = gameParam.playerTurn;
 
             boardManager.Create();
+            charaController = GameObject.FindWithTag("Player").GetComponent<CharaController>();
         }
-        private async void Update()
+        private void Update()
         {
-            if (gameParam.playerTurn == false)
+            if (gameParam.playerTurn != true)
             {
-                await UniTask.Delay(1000);
-                gameParam.playerTurn = true;
+                TurnCheck();
                 return;
             }
 
-
+            charaController.PlayerMove();
+            gameParam.playerTurn = false;
+        }
+        private async void TurnCheck()
+        {
+            await UniTask.Delay(1000);
+            gameParam.playerTurn = true;
         }
     }
 }

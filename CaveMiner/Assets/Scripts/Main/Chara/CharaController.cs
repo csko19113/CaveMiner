@@ -7,7 +7,7 @@ namespace Cave.Main.Chara
         [SerializeField] private CharaMove charaMove;
         [SerializeField] private CharaInput charaInput;
         [SerializeField] private GameParam gameParam;
-        void Update()
+        public void PlayerMove()
         {
             if (!gameParam.playerTurn) return;
 
