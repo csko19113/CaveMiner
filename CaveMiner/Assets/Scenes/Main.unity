@@ -266,6 +266,7 @@ MonoBehaviour:
   instance: {fileID: 0}
   playerTurn: 0
   boardManager: {fileID: 950959376}
+  charaController: {fileID: 0}
   second: 0
   gameParam: {fileID: 11400000, guid: 89f4c0c8997973a4d90973b21467d83e, type: 2}
 --- !u!1 &950959375
@@ -319,6 +320,7 @@ MonoBehaviour:
   floorObject: {fileID: 2168256377428059381, guid: 7d5eb7b51313681479f80e3cf9e21abe, type: 3}
   breakableWall: {fileID: 905912210842031171, guid: 83eaa925e469f3f498f2fa8111c13ea4, type: 3}
   player: {fileID: 8362794854597534245, guid: eb9ff520b1d22a241b30fead6addd85b, type: 3}
+  enemy: {fileID: 4132952218842942379, guid: 76760c752b9fb1d43a0745c5c6a22fc2, type: 3}
   goal: {fileID: 3640921238713302024, guid: 2102f50c46bbec44589d8441f3d2a8f2, type: 3}
   boardData: {fileID: 11400000, guid: 43b6aed774858d24f9ec3aa30ed591ea, type: 2}
 --- !u!114 &950959378

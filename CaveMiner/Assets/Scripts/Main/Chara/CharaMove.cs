@@ -1,4 +1,5 @@
 using UnityEngine;
+using Cysharp.Threading.Tasks;
 namespace Cave.Main.Chara
 {
     public class CharaMove : MonoBehaviour, IMove
@@ -6,7 +7,7 @@ namespace Cave.Main.Chara
         [SerializeField] private bool isMoving;
         [SerializeField] private BoxCollider2D boxcollider;
         [SerializeField] private LayerMask brockingLayer;
-        [SerializeField] private float moveSpeed = 1f;
+        [SerializeField] private float moveSpeed = 3f;
         public void AttemptMove<T>(int horizontal, int vertical)
         where T : Component
         {
@@ -24,7 +25,7 @@ namespace Cave.Main.Chara
                 OnCantMove(hitcomponent);
             }
         }
-        public void MoveObject(Vector3 startPosition, Vector3 endPosition)
+        public async void MoveObject(Vector3 startPosition, Vector3 endPosition)
         {
             isMoving = true;
             float direction = (startPosition - endPosition).sqrMagnitude;
@@ -33,6 +34,7 @@ namespace Cave.Main.Chara
             {
                 transform.position = Vector3.MoveTowards(transform.position, endPosition, moveSpeed * Time.deltaTime);
                 direction = (transform.position - endPosition).sqrMagnitude;
+                await UniTask.DelayFrame(1);
                 //unitaskで1フレーム待つ
             }
             transform.position = endPosition;

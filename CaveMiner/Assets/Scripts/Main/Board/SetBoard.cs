@@ -6,6 +6,7 @@ public class SetBoard : MonoBehaviour
     [SerializeField] private GameObject floorObject;
     [SerializeField] private GameObject breakableWall;
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject enemy;
     [SerializeField] private GameObject goal;
     [SerializeField] private BoardData boardData;
 
@@ -32,7 +33,7 @@ public class SetBoard : MonoBehaviour
                 }
                 else if (boardData.Board[x, y] == 3)//enemy
                 {
-
+                    Instantiate(enemy, new Vector3(x, y, 0), Quaternion.identity);
                 }
             }
         }
