@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: GameParam
   m_EditorClassIdentifier: 
   second: 100
-  playerTurn: 1
+  playerTurn: 0

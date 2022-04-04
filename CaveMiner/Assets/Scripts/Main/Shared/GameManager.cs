@@ -10,6 +10,7 @@ namespace Cave.Main.Shared
     public class GameManager : MonoBehaviour
     {
         public GameManager instance;
+        public static bool isMoving;//任意のオブジェクトが動いているか
         [SerializeField] private bool playerTurn;
         [SerializeField] private BoardManager boardManager;
         [SerializeField] private CharaController charaController;
@@ -28,12 +29,14 @@ namespace Cave.Main.Shared
             }
             second = gameParam.second;
             playerTurn = gameParam.playerTurn;
+            isMoving = false;
 
             boardManager.Create();
             charaController = GameObject.FindWithTag("Player").GetComponent<CharaController>();
         }
         private void Update()
         {
+            if (isMoving) return;
             if (gameParam.playerTurn != true)
             {
                 TurnCheck();
@@ -42,10 +45,10 @@ namespace Cave.Main.Shared
 
             charaController.PlayerMove();
             gameParam.playerTurn = false;
+
         }
-        private async void TurnCheck()
+        private void TurnCheck()
         {
-            await UniTask.Delay(1000);
             gameParam.playerTurn = true;
         }
     }
