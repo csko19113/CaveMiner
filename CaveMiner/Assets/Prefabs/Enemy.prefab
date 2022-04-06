@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -8238718313739823945}
   - component: {fileID: -2901713080107198003}
   - component: {fileID: -3601141444115892328}
+  - component: {fileID: -8585875398906924770}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -191,4 +192,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyMove: {fileID: -2901713080107198003}
+  enemyAI: {fileID: -8585875398906924770}
   gameParam: {fileID: 11400000, guid: 89f4c0c8997973a4d90973b21467d83e, type: 2}
+--- !u!114 &-8585875398906924770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4132952218842942379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b78bdec3c9a083a4cadc990254094572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMove: {fileID: -2901713080107198003}

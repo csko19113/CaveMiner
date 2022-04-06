@@ -119,7 +119,7 @@ MonoBehaviour:
   brockingLayer:
     serializedVersion: 2
     m_Bits: 0
-  moveSpeed: 1
+  moveSpeed: 3
 --- !u!114 &3046306007610649781
 MonoBehaviour:
   m_ObjectHideFlags: 0
