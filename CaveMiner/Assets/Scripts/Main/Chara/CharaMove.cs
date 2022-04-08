@@ -56,7 +56,21 @@ namespace Cave.Main.Chara
         }
         public void OnCantMove<T>(T hitcomponent)
         {
-            Debug.Log("CantMove");
+            if (!isMoving)
+            {
+                PlayerAttack<T>(hitcomponent);
+            }
+        }
+
+        private async void PlayerAttack<T>(T hitcomponent)
+        {
+            isMoving = true;
+            //hitcomponentだと型が不明なため出来ない？
+            BreakableWall hit = hitcomponent as BreakableWall;
+            hit.AttackWall(1);
+            Debug.Log("攻撃");
+            await UniTask.Delay(1000);
+            isMoving = false;
         }
     }
 }
