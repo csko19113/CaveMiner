@@ -118,7 +118,7 @@ MonoBehaviour:
   boxcollider: {fileID: 4279365927024400366}
   brockingLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   moveSpeed: 3
 --- !u!114 &3046306007610649781
 MonoBehaviour:
