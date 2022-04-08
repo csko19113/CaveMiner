@@ -22,7 +22,6 @@ public class SetBoard : MonoBehaviour
         {
             for (int y = 0; y < boardData.BoardHeight; y++)
             {
-                Instantiate(wallObject, new Vector3(x, y, 0), Quaternion.identity);
                 if (boardData.Board[x, y] == 1)//floor
                 {
                     Instantiate(floorObject, new Vector3(x, y, 0), Quaternion.identity);
@@ -34,6 +33,10 @@ public class SetBoard : MonoBehaviour
                 else if (boardData.Board[x, y] == 3)//enemy
                 {
                     Instantiate(enemy, new Vector3(x, y, 0), Quaternion.identity);
+                }
+                else if (boardData.Board[x, y] == 0)
+                {
+                    Instantiate(wallObject, new Vector3(x, y, 0), Quaternion.identity);
                 }
             }
         }

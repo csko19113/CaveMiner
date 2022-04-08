@@ -56,6 +56,7 @@ namespace Cave.Main.Chara
         }
         public void OnCantMove<T>(T hitcomponent)
         {
+            Debug.Log("CantMove");
         }
     }
 }
