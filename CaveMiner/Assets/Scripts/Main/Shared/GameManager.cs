@@ -39,6 +39,7 @@ namespace Cave.Main.Shared
         }
         private void Update()
         {
+            GameOverCheck();
             if (isMoving) return;
             if (gameParam.playerTurn != true)
             {
@@ -50,9 +51,12 @@ namespace Cave.Main.Shared
             charaController.PlayerMove();
 
         }
-        private void TurnCheck()
+        private void GameOverCheck()
         {
-            gameParam.playerTurn = true;
+            if (gameParam.second <= 0)
+            {
+                Debug.Log("GameOver");
+            }
         }
     }
 }
