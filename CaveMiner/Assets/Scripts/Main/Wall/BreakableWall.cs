@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cave.Scriptableobject;
 
 public class BreakableWall : MonoBehaviour
 {
     [SerializeField] private int hp;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private WallType wallType;
 
     private enum WALLTYPE
     {
