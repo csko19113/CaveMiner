@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Cave.Main.Board;
 using Cave.Main.Chara;
+using Cave.Main.Enemy;
 using Cysharp.Threading.Tasks;
 
 namespace Cave.Main.Shared
@@ -11,6 +13,8 @@ namespace Cave.Main.Shared
     {
         public GameManager instance;
         public static bool isMoving;//任意のオブジェクトが動いているか
+        public event UnityAction<int> enemyMoveAction;
+        public List<EnemyController> enemies = new List<EnemyController>();
         [SerializeField] private bool playerTurn;
         [SerializeField] private BoardManager boardManager;
         [SerializeField] private CharaController charaController;
@@ -39,12 +43,12 @@ namespace Cave.Main.Shared
             if (isMoving) return;
             if (gameParam.playerTurn != true)
             {
-                TurnCheck();
+                enemies.ForEach(n => n.EnemyMove(100));
+                gameParam.playerTurn = true;
                 return;
             }
 
             charaController.PlayerMove();
-            gameParam.playerTurn = false;
 
         }
         private void TurnCheck()

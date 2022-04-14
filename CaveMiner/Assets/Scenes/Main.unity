@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 515568265}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -264,6 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  enemies: []
   playerTurn: 0
   boardManager: {fileID: 950959376}
   charaController: {fileID: 0}

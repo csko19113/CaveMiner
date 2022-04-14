@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -2901713080107198003}
   - component: {fileID: -3601141444115892328}
   - component: {fileID: -8585875398906924770}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 1}
   m_FlipX: 0
@@ -155,8 +155,8 @@ MonoBehaviour:
   isMoving: 0
   brockingLayer:
     serializedVersion: 2
-    m_Bits: 0
-  moveSpeed: 1
+    m_Bits: 256
+  moveSpeed: 3
 --- !u!114 &-3601141444115892328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46689099109fa5248b664c06cec82137, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMove: {fileID: -2901713080107198003}
+  gameManager: {fileID: 0}
   enemyAI: {fileID: -8585875398906924770}
   gameParam: {fileID: 11400000, guid: 89f4c0c8997973a4d90973b21467d83e, type: 2}
 --- !u!114 &-8585875398906924770
