@@ -18,7 +18,6 @@ namespace Cave.Main.Shared
         [SerializeField] private bool playerTurn;
         [SerializeField] private BoardManager boardManager;
         [SerializeField] private CharaController charaController;
-        [SerializeField] private int second;
         [SerializeField] private GameParam gameParam;
         private void Awake()
         {
@@ -31,7 +30,7 @@ namespace Cave.Main.Shared
             {
                 Destroy(this.gameObject);
             }
-            second = gameParam.second;
+            gameParam.ResetSecond();
             playerTurn = gameParam.playerTurn;
             isMoving = false;
 
@@ -43,7 +42,7 @@ namespace Cave.Main.Shared
             if (isMoving) return;
             if (gameParam.playerTurn != true)
             {
-                enemies.ForEach(n => n.EnemyMove(100));
+                enemies.ForEach(n => n.EnemyMove(gameParam.second));
                 gameParam.playerTurn = true;
                 return;
             }

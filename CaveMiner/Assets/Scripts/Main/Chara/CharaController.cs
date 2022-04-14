@@ -14,7 +14,7 @@ namespace Cave.Main.Chara
             if (!gameParam.playerTurn) return;
 
             GameManager.isMoving = true;
-            charaInput.InputMoveDirection();//入力を受け取る
+            charaInput.InputMoveDirection();
             if (charaInput.Vertical != 0 || charaInput.Horizontal != 0)
             {
                 charaMove.AttemptMove<BreakableWall>(charaInput.Horizontal, charaInput.Vertical);

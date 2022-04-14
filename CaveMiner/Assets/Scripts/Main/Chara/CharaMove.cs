@@ -5,6 +5,7 @@ namespace Cave.Main.Chara
     public class CharaMove : MonoBehaviour, IMove
     {
         [SerializeField] private bool isMoving;
+        [SerializeField] private GameParam gameParam;
         [SerializeField] private BoxCollider2D boxcollider;
         [SerializeField] private LayerMask brockingLayer;
         [SerializeField] private float moveSpeed = 3f;
@@ -39,6 +40,7 @@ namespace Cave.Main.Chara
             }
             transform.position = endPosition;
             isMoving = false;
+            gameParam.second--;
         }
         public void MoveCheck(int xDir, int yDir, out RaycastHit2D hit)
         {
