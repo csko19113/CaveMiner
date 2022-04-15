@@ -4,7 +4,7 @@ public class SetBoard : MonoBehaviour
 {
     [SerializeField] private GameObject wallObject;
     [SerializeField] private GameObject floorObject;
-    [SerializeField] private GameObject breakableWall;
+    [SerializeField] private GameObject[] breakableWalls;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject enemy;
     [SerializeField] private GameObject goal;
@@ -28,10 +28,12 @@ public class SetBoard : MonoBehaviour
                 }
                 else if (boardData.Board[x, y] == 2)//breakableWall
                 {
-                    Instantiate(breakableWall, new Vector3(x, y, 0), Quaternion.identity);
+                    var index = Random.Range(0, breakableWalls.Length);
+                    Instantiate(breakableWalls[index], new Vector3(x, y, 0), Quaternion.identity);
                 }
                 else if (boardData.Board[x, y] == 3)//enemy
                 {
+                    Instantiate(floorObject, new Vector3(x, y, 0), Quaternion.identity);
                     Instantiate(enemy, new Vector3(x, y, 0), Quaternion.identity);
                 }
                 else if (boardData.Board[x, y] == 0)

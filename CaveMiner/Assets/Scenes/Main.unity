@@ -318,7 +318,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallObject: {fileID: 6194261009683428115, guid: 4d255db4b93c7a7418b3d8ac7f713ab0, type: 3}
   floorObject: {fileID: 2168256377428059381, guid: 7d5eb7b51313681479f80e3cf9e21abe, type: 3}
-  breakableWall: {fileID: 905912210842031171, guid: 83eaa925e469f3f498f2fa8111c13ea4, type: 3}
+  breakableWalls:
+  - {fileID: 905912210842031171, guid: 83eaa925e469f3f498f2fa8111c13ea4, type: 3}
+  - {fileID: 7882729322788337568, guid: eecc5f63783ffe34cb7d3b12531fda27, type: 3}
+  - {fileID: 2196290276045531481, guid: a99143e27cc569844834d4811730d0fc, type: 3}
   player: {fileID: 8362794854597534245, guid: eb9ff520b1d22a241b30fead6addd85b, type: 3}
   enemy: {fileID: 4132952218842942379, guid: 76760c752b9fb1d43a0745c5c6a22fc2, type: 3}
   goal: {fileID: 3640921238713302024, guid: 2102f50c46bbec44589d8441f3d2a8f2, type: 3}
