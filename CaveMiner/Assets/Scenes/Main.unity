@@ -268,7 +268,6 @@ MonoBehaviour:
   playerTurn: 0
   boardManager: {fileID: 950959376}
   charaController: {fileID: 0}
-  second: 0
   gameParam: {fileID: 11400000, guid: 89f4c0c8997973a4d90973b21467d83e, type: 2}
 --- !u!1 &950959375
 GameObject:

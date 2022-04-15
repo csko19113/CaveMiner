@@ -8,6 +8,7 @@ namespace Cave.Scriptableobject
         [SerializeField] private string wallName;
         [SerializeField] private int wallPoint;
         [SerializeField] private int wallHp;
+        public Sprite wallSprite;
         public string WallName => wallName;
         public int WallPoint => wallPoint;
         public int WallHp => wallHp;
