@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cave.Scriptableobject;
+using Cave.Main.Shared;
 
 public class BreakableWall : MonoBehaviour
 {
     [SerializeField] private int hp;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private WallType wallType;
+    private ScoreManager scoreManager;
 
     private void Awake()
     {
@@ -29,7 +31,7 @@ public class BreakableWall : MonoBehaviour
         if (this.hp <= 0)
         {
             this.gameObject.SetActive(false);
-            //GameManager.scoreList.Add((int)type);
+            scoreManager.wallBreakedCallback.Invoke(wallType.WallPoint);
         }
     }
 }
