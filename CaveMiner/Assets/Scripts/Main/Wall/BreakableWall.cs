@@ -9,12 +9,12 @@ public class BreakableWall : MonoBehaviour
     [SerializeField] private int hp;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private WallType wallType;
-    private ScoreManager scoreManager;
+    [SerializeField] private ScoreManager scoreManager;
 
     private void Awake()
     {
         hp = wallType.WallHp;
-        //spriteRenderer.sprite = wallType.wallSprite;
+        scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();
     }
 
     private enum WALLTYPE
