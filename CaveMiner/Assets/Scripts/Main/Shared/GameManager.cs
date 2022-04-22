@@ -18,7 +18,6 @@ namespace Cave.Main.Shared
         public List<EnemyController> enemies = new List<EnemyController>();
         [SerializeField] private bool playerTurn;
         [SerializeField] private BoardManager boardManager;
-        [SerializeField] private CharaController charaController;//addconponent
         [SerializeField] private GameParam gameParam;
         private void Awake()
         {
@@ -36,7 +35,6 @@ namespace Cave.Main.Shared
             isMoving = false;
 
             boardManager.Create();
-            charaController = GameObject.FindWithTag("Player").GetComponent<CharaController>();
         }
         private void Update()
         {
@@ -48,8 +46,6 @@ namespace Cave.Main.Shared
                 gameParam.playerTurn = true;
                 return;
             }
-
-            charaController.PlayerMove();
         }
         private void GameOverCheck()
         {

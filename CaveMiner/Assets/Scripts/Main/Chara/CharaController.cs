@@ -9,6 +9,12 @@ namespace Cave.Main.Chara
         [SerializeField] private CharaMove charaMove;
         [SerializeField] private CharaInput charaInput;
         [SerializeField] private GameParam gameParam;
+        private void Update()
+        {
+            //GameManagerから移動をここに移動
+            if (GameManager.isMoving) return;
+            PlayerMove();
+        }
         public async void PlayerMove()
         {
             if (!gameParam.playerTurn) return;
