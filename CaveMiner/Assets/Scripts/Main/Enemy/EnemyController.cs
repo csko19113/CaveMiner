@@ -6,17 +6,22 @@ namespace Cave.Main.Enemy
 {
     public class EnemyController : MonoBehaviour
     {
-        [SerializeField] private GameManager gameManager;
         [SerializeField] private EnemyAI enemyAI;
         [SerializeField] private GameParam gameParam;
         private void Awake()
         {
-            gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-            gameManager.enemies.Add(this);
+            GameManager.instance.enemies.Add(this);
+            GameManager.instance.goalCallback += () => ResetEnemies();
         }
         public void EnemyMove(int second)
         {
             enemyAI.MoveEnemy(second);
+        }
+
+        private void ResetEnemies()
+        {
+            GameManager.instance.enemies.Remove(this);
+            GameManager.instance.goalCallback -= () => ResetEnemies();
         }
     }
 }

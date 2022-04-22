@@ -11,13 +11,14 @@ namespace Cave.Main.Shared
 {
     public class GameManager : MonoBehaviour
     {
-        public GameManager instance;
+        public static GameManager instance;
         public static bool isMoving;//任意のオブジェクトが動いているか
         public event UnityAction<int> enemyMoveAction;
+        public UnityAction goalCallback;
         public List<EnemyController> enemies = new List<EnemyController>();
         [SerializeField] private bool playerTurn;
         [SerializeField] private BoardManager boardManager;
-        [SerializeField] private CharaController charaController;
+        [SerializeField] private CharaController charaController;//addconponent
         [SerializeField] private GameParam gameParam;
         private void Awake()
         {
@@ -49,7 +50,6 @@ namespace Cave.Main.Shared
             }
 
             charaController.PlayerMove();
-
         }
         private void GameOverCheck()
         {

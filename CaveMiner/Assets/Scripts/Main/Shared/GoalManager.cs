@@ -1,14 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cysharp.Threading.Tasks;
 
-public class GoalManager : SceneController
+namespace Cave.Main.Shared
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    public class GoalManager : SceneController
     {
-        if (collision.gameObject.tag == "Player")
+        private async void OnTriggerEnter2D(Collider2D collision)
         {
-            base.SceneChange();
+            if (collision.gameObject.tag == "Player")
+            {
+                await UniTask.Delay(500);
+                base.SceneChange();
+                GameManager.instance.goalCallback.Invoke();
+            }
         }
     }
 }
