@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 //シーン遷移用のクラス
 public abstract class SceneController : MonoBehaviour
 {
+    [SerializeField] protected Scenes scenename;
     protected enum Scenes
     {
         Title,

@@ -9,7 +9,7 @@ using Cysharp.Threading.Tasks;
 
 namespace Cave.Main.Shared
 {
-    public class GameManager : MonoBehaviour
+    public class GameManager : SceneController
     {
         public static GameManager instance;
         public static bool isMoving;//任意のオブジェクトが動いているか
@@ -51,6 +51,7 @@ namespace Cave.Main.Shared
         {
             if (gameParam.second <= 0)
             {
+                base.SceneChange(base.scenename.ToString());
                 Debug.Log("GameOver");
             }
         }
