@@ -8,19 +8,6 @@ namespace Cave.Main.Board
         [SerializeField] private SetBoard setBoard;
         [SerializeField] private ReserMap reserMap;
         [SerializeField] private CreateDangeon createDangeon;
-        private BoardManager instance;
-        private void Awake()
-        {
-            if (instance == null)
-            {
-                instance = this;
-                DontDestroyOnLoad(this.gameObject);
-            }
-            else
-            {
-                Destroy(this.gameObject);
-            }
-        }
         public void Create()
         {
             reserMap.ResetMap();

@@ -1,6 +1,8 @@
 using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 
 namespace Cave.Main.Shared
@@ -9,13 +11,14 @@ namespace Cave.Main.Shared
     {
         public UnityAction<int> wallBreakedCallback;
         private List<int> scoreList = new List<int>();
+        [SerializeField] private Text scoreText;
         private void Awake()
         {
-            wallBreakedCallback += (score) => AddScore(score);
-        }
-        private void AddScore(int score)
-        {
-            scoreList.Add(score);
+            wallBreakedCallback += (score) => { scoreList.Add(score); };
+            wallBreakedCallback += (score) =>
+            {
+                scoreText.text = " $:" + scoreList.Sum();
+            };
         }
         private void ResetScore()
         {

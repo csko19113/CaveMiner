@@ -38,7 +38,6 @@ where T : Component
                 transform.position = Vector3.MoveTowards(transform.position, endPosition, moveSpeed * Time.deltaTime);
                 direction = (transform.position - endPosition).sqrMagnitude;
                 await UniTask.DelayFrame(1);
-                //unitaskで1フレーム待つ
             }
             transform.position = endPosition;
             isMoving = false;
