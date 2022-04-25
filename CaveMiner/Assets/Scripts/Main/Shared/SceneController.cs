@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 //シーン遷移用のクラス
 public abstract class SceneController : MonoBehaviour
 {
-    [SerializeField] protected string changeScene;//todo 専用のenumの作成
-    protected virtual void SceneChange()
+    protected enum Scenes
     {
-        SceneManager.LoadScene(changeScene);
+        Title,
+        Main,
+        Result
+    }
+    protected virtual void SceneChange(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

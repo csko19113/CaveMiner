@@ -10,6 +10,7 @@ namespace Cave.Main.Board
         [SerializeField] private CreateDangeon createDangeon;
         public void Create()
         {
+            Debug.Log("Create");
             reserMap.ResetMap();
             createDangeon.CreateRoom();
             setBoard.SetBoardObject();
