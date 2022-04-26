@@ -11,11 +11,10 @@ namespace Cave.Main.Chara
         [SerializeField] private GameParam gameParam;
         private void Update()
         {
-            //GameManagerから移動をここに移動
             if (GameManager.isMoving) return;
-            PlayerMove();
+            PlayerMove().Forget();
         }
-        public async void PlayerMove()
+        private async UniTask PlayerMove()
         {
             if (!gameParam.playerTurn) return;
 
