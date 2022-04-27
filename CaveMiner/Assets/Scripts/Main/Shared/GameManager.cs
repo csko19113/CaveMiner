@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 using Cave.Main.Board;
 using Cave.Main.Chara;
@@ -55,5 +56,11 @@ namespace Cave.Main.Shared
                 Debug.Log("GameOver");
             }
         }
+        /*
+        private void UpdateLimitSecond()
+        {
+            limitText.text = gameParam.second + " 秒";
+        }
+        */
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using Cave.Main.UI;
 using Cysharp.Threading.Tasks;
 namespace Cave.Main.Chara
 {
@@ -41,6 +42,7 @@ namespace Cave.Main.Chara
             transform.position = endPosition;
             isMoving = false;
             gameParam.second--;
+            //gameParam.turnChangeCallBack.Invoke();
         }
         public void MoveCheck(int xDir, int yDir, out RaycastHit2D hit)
         {
