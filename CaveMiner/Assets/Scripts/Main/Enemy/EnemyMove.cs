@@ -9,10 +9,15 @@ namespace Cave.Main.Enemy
 {
     public class EnemyMove : MonoBehaviour, IMove
     {
+        [SerializeField] private ScoreManager scoreManager;
         [SerializeField] private BoxCollider2D boxcollider;
         [SerializeField] private bool isMoving;
         [SerializeField] private LayerMask brockingLayer;
         [SerializeField] private int moveSpeed;
+        private void Awake()
+        {
+            scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();
+        }
         public void AttemptMove<T>(int horizontal, int vertical)
 where T : Component
         {
@@ -63,6 +68,7 @@ where T : Component
             if (ScoreManager.scoreList.Count != 0)
             {
                 ScoreManager.scoreList.Remove(ScoreManager.scoreList.Last());
+                scoreManager.wallBreakedCallback.Invoke(0);//textの反映
             }
         }
     }

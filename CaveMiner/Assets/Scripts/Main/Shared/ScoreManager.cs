@@ -14,7 +14,7 @@ namespace Cave.Main.Shared
         [SerializeField] private Text scoreText;
         private void Awake()
         {
-            wallBreakedCallback += (score) => { scoreList.Add(score); };
+            wallBreakedCallback += (score) => { if (score != 0) scoreList.Add(score); };
             wallBreakedCallback += (score) =>
             {
                 scoreText.text = " $:" + scoreList.Sum();
