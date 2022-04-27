@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Cysharp.Threading.Tasks;
 using Cave.Main.Chara;
+using Cave.Main.Shared;
 namespace Cave.Main.Enemy
 {
     public class EnemyMove : MonoBehaviour, IMove
@@ -58,6 +60,10 @@ where T : Component
         }
         public void OnCantMove<T>(T hitcomponent)
         {
+            if (ScoreManager.scoreList.Count != 0)
+            {
+                ScoreManager.scoreList.Remove(ScoreManager.scoreList.Last());
+            }
         }
     }
 }
