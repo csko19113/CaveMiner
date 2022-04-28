@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cysharp.Threading.Tasks;
 using Cave.Main.Shared;
 namespace Cave.Main.Enemy
 {
     public class EnemyController : MonoBehaviour
     {
+        public bool IsMoving => isMoving;
         [SerializeField] private EnemyAI enemyAI;
         [SerializeField] private GameParam gameParam;
+        [SerializeField] private bool isMoving = false;
         private void Awake()
         {
             GameManager.instance.enemies.Add(this);
@@ -15,7 +18,12 @@ namespace Cave.Main.Enemy
         }
         public void EnemyMove(int second)
         {
-            enemyAI.MoveEnemy(second);
+            if (!isMoving)
+            {
+                isMoving = true;
+                enemyAI.MoveEnemy(second);
+                isMoving = false;
+            }
         }
 
         private void ResetEnemies()

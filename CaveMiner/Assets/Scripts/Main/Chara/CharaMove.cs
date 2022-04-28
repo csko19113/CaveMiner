@@ -40,6 +40,8 @@ namespace Cave.Main.Chara
                 //unitaskで1フレーム待つ
             }
             transform.position = endPosition;
+            await UniTask.Delay(250);
+            gameParam.playerTurn = false;
             isMoving = false;
             gameParam.second--;
             //gameParam.turnChangeCallBack.Invoke();
@@ -58,11 +60,13 @@ namespace Cave.Main.Chara
                 return;
             }
         }
-        public void OnCantMove<T>(T hitcomponent)
+        public async void OnCantMove<T>(T hitcomponent)
         {
             if (!isMoving)
             {
                 PlayerAttack<T>(hitcomponent);
+                await UniTask.Delay(250);
+                gameParam.playerTurn = false;
             }
         }
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
@@ -37,15 +38,19 @@ namespace Cave.Main.Shared
 
             boardManager.Create();
         }
-        private void Update()
+        private async void Update()
         {
             GameOverCheck();
             if (isMoving) return;
-            if (gameParam.playerTurn != true)
+            if (!gameParam.playerTurn)
             {
                 enemies.ForEach(n => n.EnemyMove(gameParam.second));
-                gameParam.playerTurn = true;
-                return;
+                if (enemies.Select(n => n.IsMoving).All(n => !n))
+                {
+                    await UniTask.Delay(250);
+                    gameParam.playerTurn = true;
+                    return;
+                }
             }
         }
         private void GameOverCheck()
