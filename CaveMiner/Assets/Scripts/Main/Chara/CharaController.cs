@@ -23,7 +23,6 @@ namespace Cave.Main.Chara
             if (charaInput.Vertical != 0 || charaInput.Horizontal != 0)
             {
                 charaMove.AttemptMove<BreakableWall>(charaInput.Horizontal, charaInput.Vertical);
-                //gameParam.playerTurn = false;
             }
             await UniTask.Delay(250);
             GameManager.isMoving = false;

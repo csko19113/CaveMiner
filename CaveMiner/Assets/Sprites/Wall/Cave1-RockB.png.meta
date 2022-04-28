@@ -1,0 +1,1044 @@
+fileFormatVersion: 2
+guid: 70f7f6c643bf56847a6c534ab406adb6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6199595615183205457
+    second: Cave1-RockB_0
+  - first:
+      213: -1532357483850959110
+    second: Cave1-RockB_1
+  - first:
+      213: -4913818065340740797
+    second: Cave1-RockB_2
+  - first:
+      213: 500756944005186043
+    second: Cave1-RockB_3
+  - first:
+      213: -5893669971757897394
+    second: Cave1-RockB_4
+  - first:
+      213: -8821803490323220755
+    second: Cave1-RockB_5
+  - first:
+      213: -5827281796968755448
+    second: Cave1-RockB_6
+  - first:
+      213: 6575554425520812163
+    second: Cave1-RockB_7
+  - first:
+      213: -3319595788645769326
+    second: Cave1-RockB_8
+  - first:
+      213: -5272092581899197895
+    second: Cave1-RockB_9
+  - first:
+      213: -1908133569994356193
+    second: Cave1-RockB_10
+  - first:
+      213: 3491576353801546812
+    second: Cave1-RockB_11
+  - first:
+      213: -9095423622666257203
+    second: Cave1-RockB_12
+  - first:
+      213: 219696618585965613
+    second: Cave1-RockB_13
+  - first:
+      213: -7562695646810173318
+    second: Cave1-RockB_14
+  - first:
+      213: -2750929305990693517
+    second: Cave1-RockB_15
+  - first:
+      213: -5810024462948043799
+    second: Cave1-RockB_16
+  - first:
+      213: -7795031995847761225
+    second: Cave1-RockB_17
+  - first:
+      213: -4803297001755330744
+    second: Cave1-RockB_18
+  - first:
+      213: 2953939928361008542
+    second: Cave1-RockB_19
+  - first:
+      213: -3430232956210179886
+    second: Cave1-RockB_20
+  - first:
+      213: -7364935365331678795
+    second: Cave1-RockB_21
+  - first:
+      213: -6858026112500899764
+    second: Cave1-RockB_22
+  - first:
+      213: 8692130922914581989
+    second: Cave1-RockB_23
+  - first:
+      213: 8320254299134228812
+    second: Cave1-RockB_24
+  - first:
+      213: -391096045846871948
+    second: Cave1-RockB_25
+  - first:
+      213: 23012035490063197
+    second: Cave1-RockB_26
+  - first:
+      213: -7497894378811488917
+    second: Cave1-RockB_27
+  - first:
+      213: 9033012748420589724
+    second: Cave1-RockB_28
+  - first:
+      213: 8436405735973722365
+    second: Cave1-RockB_29
+  - first:
+      213: 5682869728985016180
+    second: Cave1-RockB_30
+  - first:
+      213: -1978655897147454393
+    second: Cave1-RockB_31
+  - first:
+      213: 1429141948277869466
+    second: Cave1-RockB_32
+  - first:
+      213: 863719650646866328
+    second: Cave1-RockB_33
+  - first:
+      213: 2970317378192569639
+    second: Cave1-RockB_34
+  - first:
+      213: -8933288424571975235
+    second: Cave1-RockB_35
+  - first:
+      213: 7395661103988295183
+    second: Cave1-RockB_36
+  - first:
+      213: -3427807536284541829
+    second: Cave1-RockB_37
+  - first:
+      213: 3812846600853079199
+    second: Cave1-RockB_38
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cave1-RockB_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 154701a7d53690650800000000000000
+      internalID: 6199595615183205457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_1
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 483
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6f62abcf8fbbae0800000000000000
+      internalID: -1532357483850959110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_2
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 484
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34bc77c018c9ecbb0800000000000000
+      internalID: -4913818065340740797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_3
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 483
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf14d3699cb03f600800000000000000
+      internalID: 500756944005186043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_4
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 482
+        width: 64
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49ebfdf26a753ea0800000000000000
+      internalID: -5893669971757897394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_5
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 420
+        width: 82
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de6bbf82778a29580800000000000000
+      internalID: -8821803490323220755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_6
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 448
+        width: 62
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80fc3957416512fa0800000000000000
+      internalID: -5827281796968755448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_7
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 450
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3807a6649ef014b50800000000000000
+      internalID: 6575554425520812163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_8
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 418
+        width: 29
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29fd2ebd73d6ee1d0800000000000000
+      internalID: -3319595788645769326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_9
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 454
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9322de0cab3c5d6b0800000000000000
+      internalID: -5272092581899197895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1a0d78b0a2f485e0800000000000000
+      internalID: -1908133569994356193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_11
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 417
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3cae72d132947030800000000000000
+      internalID: 3491576353801546812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_12
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 420
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dccf741a76096c180800000000000000
+      internalID: -9095423622666257203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_13
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 422
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d24cb2d19e48c0300800000000000000
+      internalID: 219696618585965613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_14
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 355
+        width: 59
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a709c7bc068eb0790800000000000000
+      internalID: -7562695646810173318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_15
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 359
+        width: 27
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d763a0f5cb2d9d0800000000000000
+      internalID: -2750929305990693517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_16
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 358
+        width: 57
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e3f6a5a885ae5fa0800000000000000
+      internalID: -5810024462948043799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_17
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 396
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b2a0ba13bb72d390800000000000000
+      internalID: -7795031995847761225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_18
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 192
+        width: 160
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 847bcab63d2475db0800000000000000
+      internalID: -4803297001755330744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_19
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 359
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9dfcc5d6b08ef820800000000000000
+      internalID: 2953939928361008542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_20
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 299
+        width: 66
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0114cec4d5560d0800000000000000
+      internalID: -3430232956210179886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_21
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 192
+        width: 91
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b981bb6e4e7ac990800000000000000
+      internalID: -7364935365331678795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_22
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 130
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c40e708069563d0a0800000000000000
+      internalID: -6858026112500899764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_23
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 165
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ed03818507a0a870800000000000000
+      internalID: 8692130922914581989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_24
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 130
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49ffc4d33b777370800000000000000
+      internalID: 8320254299134228812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_25
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 165
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 470cc3ae73c829af0800000000000000
+      internalID: -391096045846871948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_26
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 130
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d53a1f80351c15000800000000000000
+      internalID: 23012035490063197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_27
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 165
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b650b8bb9c022f790800000000000000
+      internalID: -7497894378811488917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_28
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 130
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c982f295c35bb5d70800000000000000
+      internalID: 9033012748420589724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_29
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 165
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df818c1a152241570800000000000000
+      internalID: 8436405735973722365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_30
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 130
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 477e8fcc8eb9dde40800000000000000
+      internalID: 5682869728985016180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_31
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 130
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c4bc5e1f66a84e0800000000000000
+      internalID: -1978655897147454393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_32
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 130
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9b46b0b70555d310800000000000000
+      internalID: 1429141948277869466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_33
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 130
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899b452327c8cfb00800000000000000
+      internalID: 863719650646866328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_34
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 99
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72576550befa83920800000000000000
+      internalID: 2970317378192569639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_35
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 99
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db947492285960480800000000000000
+      internalID: -8933288424571975235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_36
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 99
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f064566179aa2a660800000000000000
+      internalID: 7395661103988295183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_37
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 160
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c5a51053bfd60d0800000000000000
+      internalID: -3427807536284541829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave1-RockB_38
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 36
+        width: 75
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9447ea38c3f9e430800000000000000
+      internalID: 3812846600853079199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc691acfe81b2b3459cf2710e6afa8ba, type: 3}
   m_Name: GameParam
   m_EditorClassIdentifier: 
-  second: 100
-  playerTurn: 0
+  second: 78
+  playerTurn: 1

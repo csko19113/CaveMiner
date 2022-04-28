@@ -8,10 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6390819040550515511}
+  - component: {fileID: 8567568847854939789}
   - component: {fileID: 7786352925229058740}
   - component: {fileID: 319408457877850571}
   - component: {fileID: -5394459507406156742}
+  - component: {fileID: 5319951896721406501}
   m_Layer: 8
   m_Name: Amethyst
   m_TagString: Untagged
@@ -19,8 +20,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6390819040550515511
-Transform:
+--- !u!224 &8567568847854939789
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -28,11 +29,16 @@ Transform:
   m_GameObject: {fileID: 905912210842031171}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.36, y: 3.36, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.487, y: 0.0000030519}
+  m_SizeDelta: {x: 0.2925, y: 0.2751}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &7786352925229058740
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -73,12 +79,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 0.8343867, b: 0.3820755, a: 1}
+  m_Sprite: {fileID: 1429141948277869466, guid: 70f7f6c643bf56847a6c534ab406adb6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.28, y: 0.3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -101,14 +107,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.28, y: 0.3}
+    newSize: {x: 0.28, y: 0.3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.25, y: 0.25}
   m_EdgeRadius: 0
 --- !u!114 &-5394459507406156742
 MonoBehaviour:
@@ -125,3 +131,12 @@ MonoBehaviour:
   hp: 0
   spriteRenderer: {fileID: 0}
   wallType: {fileID: 11400000, guid: 52b39cb8245227347aa946f919945fdd, type: 2}
+  scoreManager: {fileID: 0}
+--- !u!222 &5319951896721406501
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905912210842031171}
+  m_CullTransparentMesh: 1
