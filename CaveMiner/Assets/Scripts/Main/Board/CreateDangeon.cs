@@ -46,14 +46,14 @@ public class CreateDangeon : MonoBehaviour
             {
                 //xが同じになるまで移動、現在地をfloorにを繰り返す(道にする)
                 roadStartX = CompareRoadPoint(roadStartX, GrobalRoadPointX);
-                boardData.Board[roadStartX, roadStartY] = 1;
+                SetRoad(roadStartX, roadStartY);
             }
 
             while (roadStartY != GrobalRoadPointY)
             {
                 //yが同じになるまで移動、現在地をfloorにを繰り返す(道にする)
                 roadStartY = CompareRoadPoint(roadStartY, GrobalRoadPointY);
-                boardData.Board[roadStartX, roadStartY] = 1;
+                SetRoad(roadStartX, roadStartY);
             }
         }
         else//y軸方向から移動する
@@ -61,14 +61,20 @@ public class CreateDangeon : MonoBehaviour
             while (roadStartY != GrobalRoadPointY)
             {
                 roadStartY = CompareRoadPoint(roadStartY, GrobalRoadPointY);
-                boardData.Board[roadStartX, roadStartY] = 1;
+                SetRoad(roadStartX, roadStartY);
             }
             while (roadStartX != GrobalRoadPointX)
             {
                 roadStartX = CompareRoadPoint(roadStartX, GrobalRoadPointX);
-                boardData.Board[roadStartX, roadStartY] = 1;
+                SetRoad(roadStartX, roadStartY);
             }
         }
+    }
+    private void SetRoad(int roadStartX, int roadStartY)
+    {
+        boardData.Board[roadStartX, roadStartY] = 1;
+        boardData.Board[roadStartX + 1, roadStartY] = 1;
+        boardData.Board[roadStartX, roadStartY + 1] = 1;
     }
     private int CompareRoadPoint(int roadStartPoint, int GrobalRoadPoint)
     {

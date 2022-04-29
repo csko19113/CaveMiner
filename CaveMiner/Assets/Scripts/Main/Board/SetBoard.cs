@@ -28,6 +28,7 @@ public class SetBoard : MonoBehaviour
                 }
                 else if (boardData.Board[x, y] == 2)//breakableWall
                 {
+                    Instantiate(floorObject, new Vector3(x, y, 0), Quaternion.identity);
                     var index = Random.Range(0, breakableWalls.Length);
                     Instantiate(breakableWalls[index], new Vector3(x, y, 0), Quaternion.identity);
                 }
