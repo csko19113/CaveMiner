@@ -3,7 +3,7 @@ using UnityEngine;
 public class SetBoard : MonoBehaviour
 {
     [SerializeField] private GameObject wallObject;
-    [SerializeField] private GameObject floorObject;
+    [SerializeField] private GameObject[] floorObject;
     [SerializeField] private GameObject[] breakableWalls;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject enemy;
@@ -24,17 +24,20 @@ public class SetBoard : MonoBehaviour
             {
                 if (boardData.Board[x, y] == 1)//floor
                 {
-                    Instantiate(floorObject, new Vector3(x, y, 0), Quaternion.identity);
+                    var f_index = Random.Range(0, floorObject.Length);
+                    Instantiate(floorObject[f_index], new Vector3(x, y, 0), Quaternion.identity);
                 }
                 else if (boardData.Board[x, y] == 2)//breakableWall
                 {
-                    Instantiate(floorObject, new Vector3(x, y, 0), Quaternion.identity);
+                    var f_index = Random.Range(0, floorObject.Length);
+                    Instantiate(floorObject[f_index], new Vector3(x, y, 0), Quaternion.identity);
                     var index = Random.Range(0, breakableWalls.Length);
                     Instantiate(breakableWalls[index], new Vector3(x, y, 0), Quaternion.identity);
                 }
                 else if (boardData.Board[x, y] == 3)//enemy
                 {
-                    Instantiate(floorObject, new Vector3(x, y, 0), Quaternion.identity);
+                    var f_index = Random.Range(0, floorObject.Length);
+                    Instantiate(floorObject[f_index], new Vector3(x, y, 0), Quaternion.identity);
                     Instantiate(enemy, new Vector3(x, y, 0), Quaternion.identity);
                 }
                 else if (boardData.Board[x, y] == 0)

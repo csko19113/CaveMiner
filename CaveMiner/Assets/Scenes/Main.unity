@@ -607,7 +607,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallObject: {fileID: 6194261009683428115, guid: 4d255db4b93c7a7418b3d8ac7f713ab0, type: 3}
-  floorObject: {fileID: 2168256377428059381, guid: 7d5eb7b51313681479f80e3cf9e21abe, type: 3}
+  floorObject:
+  - {fileID: 2205503306451179153, guid: 4a708c1907d3ca14db9c9b47c85cfde6, type: 3}
+  - {fileID: 2260531065563771918, guid: 6ec36107bdd7b5149bcbd430a584b2cf, type: 3}
+  - {fileID: 3157146929521523994, guid: 30c1f329fb5be284ab4e8e81ddea43f6, type: 3}
+  - {fileID: 207174588446399730, guid: ade1df2b779013346b284de32703bdb0, type: 3}
+  - {fileID: 5855689240687302709, guid: a234672a7742c024e8c80dac95b5f440, type: 3}
+  - {fileID: 4529405721693301171, guid: 4f011fcfc855ca4458cddcc2f2e6eada, type: 3}
+  - {fileID: 1125456786838925343, guid: f511972906cb0e94f840c20e3cfa64a2, type: 3}
+  - {fileID: 4066124486168891263, guid: ede4be65c7acb30419a159954841dfc5, type: 3}
   breakableWalls:
   - {fileID: 905912210842031171, guid: 83eaa925e469f3f498f2fa8111c13ea4, type: 3}
   - {fileID: 7882729322788337568, guid: eecc5f63783ffe34cb7d3b12531fda27, type: 3}
