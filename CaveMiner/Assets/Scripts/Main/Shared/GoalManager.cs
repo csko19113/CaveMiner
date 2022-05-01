@@ -17,5 +17,12 @@ namespace Cave.Main.Shared
                 GameManager.instance.goalCallback.Invoke();
             }
         }
+
+        [ContextMenu("Do Goal")]
+        private void Goal()
+        {
+            base.SceneChange(base.scenename.ToString());
+            GameManager.instance.goalCallback.Invoke();
+        }
     }
 }
