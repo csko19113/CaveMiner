@@ -308,7 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e3b90c34d93f3845b1ca51ae7b02358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenename: 0
+  scenename: 2
   enemies: []
   playerTurn: 0
   boardManager: {fileID: 950959376}
