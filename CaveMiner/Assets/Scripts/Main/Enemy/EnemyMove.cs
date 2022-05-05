@@ -65,9 +65,9 @@ where T : Component
         }
         public void OnCantMove<T>(T hitcomponent)
         {
-            if (ScoreManager.scoreList.Count != 0)
+            if (GameManager.scoreList.Count != 0)
             {
-                ScoreManager.scoreList.Remove(ScoreManager.scoreList.Last());
+                GameManager.scoreList.Remove(GameManager.scoreList.Last());
                 scoreManager.wallBreakedCallback.Invoke(0);//textの反映
             }
         }

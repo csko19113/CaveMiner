@@ -14,6 +14,7 @@ namespace Cave.Main.Shared
     public class GameManager : SceneController
     {
         public static GameManager instance;
+        public static List<int> scoreList = new List<int>();
         public static bool isMoving;//任意のオブジェクトが動いているか
         public event UnityAction<int> enemyMoveAction;
         public UnityAction goalCallback;
