@@ -121,7 +121,9 @@ MonoBehaviour:
   brockingLayer:
     serializedVersion: 2
     m_Bits: 256
+  animator: {fileID: 8037787776347077877}
   moveSpeed: 3
+  paramName: Direction
 --- !u!114 &3046306007610649781
 MonoBehaviour:
   m_ObjectHideFlags: 0

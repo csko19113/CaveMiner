@@ -9,11 +9,21 @@ namespace Cave.Main.Chara
         [SerializeField] private GameParam gameParam;
         [SerializeField] private BoxCollider2D boxcollider;
         [SerializeField] private LayerMask brockingLayer;
+        [SerializeField] private Animator animator;
         [SerializeField] private float moveSpeed = 3f;
+        [SerializeField] private string paramName;
         public void AttemptMove<T>(int horizontal, int vertical)
         where T : Component
         {
             RaycastHit2D hit;
+            if (horizontal != 0)
+            {
+                animator.SetInteger(paramName, horizontal);
+            }
+            else if (vertical != 0)
+            {
+                animator.SetInteger(paramName, vertical * -10);
+            }
             MoveCheck(horizontal, vertical, out hit);
             if (hit.transform == null)
             {
