@@ -37,6 +37,7 @@ namespace Cave.Main.Shared
             playerTurn = gameParam.playerTurn;
             isMoving = false;
 
+            boardManager = GameObject.FindGameObjectWithTag("BoardManager").GetComponent<BoardManager>();
             boardManager.Create();
         }
         private async void Update()
@@ -58,6 +59,7 @@ namespace Cave.Main.Shared
         {
             if (gameParam.second <= 0)
             {
+                gameParam.ResetSecond();
                 base.SceneChange(base.scenename.ToString());
                 Debug.Log("GameOver");
             }

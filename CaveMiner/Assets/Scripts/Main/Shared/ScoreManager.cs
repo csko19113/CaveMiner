@@ -21,7 +21,7 @@ namespace Cave.Main.Shared
             };
             wallBreakedCallback.Invoke(0);//textの反映
         }
-        private void ResetScore()
+        private void ResetScore()//scripableでシーンを持越し
         {
             GameManager.scoreList.Clear();
         }
