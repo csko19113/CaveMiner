@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Title
+namespace Cave.Main.Title
 {
     public class StartController : SceneController
     {
@@ -11,4 +11,5 @@ namespace Title
             base.SceneChange(base.scenename.ToString());
         }
     }
+
 }

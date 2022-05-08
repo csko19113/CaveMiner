@@ -7,6 +7,7 @@ using UnityEngine.Events;
 using Cave.Main.Board;
 using Cave.Main.Chara;
 using Cave.Main.Enemy;
+using Cave.Common;
 using Cysharp.Threading.Tasks;
 
 namespace Cave.Main.Shared
@@ -22,6 +23,8 @@ namespace Cave.Main.Shared
         [SerializeField] private bool playerTurn;
         [SerializeField] private BoardManager boardManager;
         [SerializeField] private GameParam gameParam;
+        [SerializeField] private string scoreKey;
+        private SaveDataManager saveDataManager = new SaveDataManager();
         private void Awake()
         {
             if (instance == null)
@@ -59,6 +62,10 @@ namespace Cave.Main.Shared
         {
             if (gameParam.second <= 0)
             {
+                if (scoreList.Sum() >= saveDataManager.GetMaxScore(scoreKey))
+                {
+                    saveDataManager.SetMaxScore(scoreKey, scoreList.Sum());
+                }
                 gameParam.ResetSecond();
                 base.SceneChange(base.scenename.ToString());
                 Debug.Log("GameOver");

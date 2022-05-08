@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShowPopup : MonoBehaviour
+namespace Cave.Main.Title
 {
-    [SerializeField] private GameObject popup;
-    public void Show()
+    public class ShowPopup : MonoBehaviour
     {
-        popup.SetActive(true);
+        [SerializeField] private GameObject popup;
+        public void Show()
+        {
+            popup.SetActive(true);
+        }
     }
 }
