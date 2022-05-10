@@ -313,6 +313,7 @@ MonoBehaviour:
   playerTurn: 0
   boardManager: {fileID: 950959376}
   gameParam: {fileID: 11400000, guid: 89f4c0c8997973a4d90973b21467d83e, type: 2}
+  scoreKey: 
 --- !u!1 &649648643
 GameObject:
   m_ObjectHideFlags: 0

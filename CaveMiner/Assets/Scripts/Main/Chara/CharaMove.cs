@@ -50,7 +50,7 @@ namespace Cave.Main.Chara
                 //unitaskで1フレーム待つ
             }
             transform.position = endPosition;
-            await UniTask.Delay(250);
+            await UniTask.Delay(150);
             gameParam.playerTurn = false;
             isMoving = false;
             gameParam.second--;
@@ -75,7 +75,7 @@ namespace Cave.Main.Chara
             if (!isMoving)
             {
                 PlayerAttack<T>(hitcomponent);
-                await UniTask.Delay(250);
+                await UniTask.Delay(150);
                 gameParam.second--;
                 gameParam.playerTurn = false;
             }
