@@ -54,6 +54,7 @@ namespace Cave.Main.Shared
                 {
                     await UniTask.Delay(250);
                     gameParam.playerTurn = true;
+                    enemies.ForEach(n => n.ResetAttack());//
                     return;
                 }
             }

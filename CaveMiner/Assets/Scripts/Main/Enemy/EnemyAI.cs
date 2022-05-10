@@ -81,6 +81,9 @@ namespace Cave.Main.Enemy
                 return STATE.idle;
             }
         }
-
+        public void ReserAttack()
+        {
+            enemyMove.ReserAttack();
+        }
     }
 }

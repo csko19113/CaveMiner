@@ -25,6 +25,10 @@ namespace Cave.Main.Enemy
                 isMoving = false;
             }
         }
+        public void ResetAttack()
+        {
+            enemyAI.ReserAttack();
+        }
 
         private void ResetEnemies()
         {

@@ -13,6 +13,7 @@ namespace Cave.Main.Enemy
         [SerializeField] private BoxCollider2D boxcollider;
         [SerializeField] private AudioSource audioSource;
         [SerializeField] private bool isMoving;
+        [SerializeField] private bool isAttack;
         [SerializeField] private LayerMask brockingLayer;
         [SerializeField] private int moveSpeed;
         private void Awake()
@@ -31,7 +32,7 @@ where T : Component
 
             T hitcomponent = hit.transform.GetComponent<T>();
             //hitcomponentがTの型でないときnullになる。
-            if (!isMoving && hitcomponent != null)//動いてないかつ、指定した障害物にあたっている
+            if (!isMoving && hitcomponent != null && !isAttack)//動いてないかつ、指定した障害物にあたっている
             {
                 OnCantMove(hitcomponent);
             }
@@ -69,10 +70,15 @@ where T : Component
             if (GameManager.scoreList.Count != 0)
             {
                 Debug.Log("Enemy Attack");
+                isAttack = true;
                 audioSource.Play();
                 GameManager.scoreList.Remove(GameManager.scoreList.Last());
                 scoreManager.wallBreakedCallback.Invoke(0);//textの反映
             }
+        }
+        public void ReserAttack()
+        {
+            isAttack = false;
         }
     }
 }
