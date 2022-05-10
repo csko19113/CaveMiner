@@ -67,6 +67,7 @@ namespace Cave.Main.Shared
                     saveDataManager.SetMaxScore(scoreKey, scoreList.Sum());
                 }
                 gameParam.ResetSecond();
+                goalCallback.Invoke();//ゲーム終了時エネミーリストのリセット
                 base.SceneChange(base.scenename.ToString());
                 Debug.Log("GameOver");
             }
