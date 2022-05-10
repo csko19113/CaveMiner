@@ -76,6 +76,7 @@ namespace Cave.Main.Chara
             {
                 PlayerAttack<T>(hitcomponent);
                 await UniTask.Delay(250);
+                gameParam.second--;
                 gameParam.playerTurn = false;
             }
         }
@@ -83,7 +84,6 @@ namespace Cave.Main.Chara
         private async void PlayerAttack<T>(T hitcomponent)
         {
             isMoving = true;
-            //hitcomponentだと型が不明なため出来ない？
             BreakableWall hit = hitcomponent as BreakableWall;
             hit.AttackWall(1);
             Debug.Log("攻撃");
