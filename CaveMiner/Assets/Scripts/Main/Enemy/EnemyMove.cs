@@ -11,6 +11,7 @@ namespace Cave.Main.Enemy
     {
         [SerializeField] private ScoreManager scoreManager;
         [SerializeField] private BoxCollider2D boxcollider;
+        [SerializeField] private AudioSource audioSource;
         [SerializeField] private bool isMoving;
         [SerializeField] private LayerMask brockingLayer;
         [SerializeField] private int moveSpeed;
@@ -67,6 +68,8 @@ where T : Component
         {
             if (GameManager.scoreList.Count != 0)
             {
+                Debug.Log("Enemy Attack");
+                audioSource.Play();
                 GameManager.scoreList.Remove(GameManager.scoreList.Last());
                 scoreManager.wallBreakedCallback.Invoke(0);//textの反映
             }

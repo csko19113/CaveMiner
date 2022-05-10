@@ -10,8 +10,9 @@ namespace Cave.Main.Chara
         [SerializeField] private BoxCollider2D boxcollider;
         [SerializeField] private LayerMask brockingLayer;
         [SerializeField] private Animator animator;
+        [SerializeField] private AudioSource audioSource;
         [SerializeField] private float moveSpeed = 3f;
-        [SerializeField] private string paramName;
+        [SerializeField] private string paramName;//animatorのパラメータ名
         public void AttemptMove<T>(int horizontal, int vertical)
         where T : Component
         {
@@ -84,6 +85,7 @@ namespace Cave.Main.Chara
         private async void PlayerAttack<T>(T hitcomponent)
         {
             isMoving = true;
+            audioSource.Play();
             BreakableWall hit = hitcomponent as BreakableWall;
             hit.AttackWall(1);
             Debug.Log("攻撃");
