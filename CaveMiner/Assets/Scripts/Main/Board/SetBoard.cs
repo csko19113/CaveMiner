@@ -1,80 +1,83 @@
 using UnityEngine;
 ///Boardに従いオブジェクトをインスタンス化するクラス
-public class SetBoard : MonoBehaviour
+namespace Cave.Main.Board
 {
-    [SerializeField] private GameObject wallObject;
-    [SerializeField] private GameObject[] floorObject;
-    [SerializeField] private GameObject[] breakableWalls;
-    [SerializeField] private GameObject player;
-    [SerializeField] private GameObject enemy;
-    [SerializeField] private GameObject goal;
-    [SerializeField] private BoardData boardData;
+    public class SetBoard : MonoBehaviour
+    {
+        [SerializeField] private GameObject wallObject;
+        [SerializeField] private GameObject[] floorObject;
+        [SerializeField] private GameObject[] breakableWalls;
+        [SerializeField] private GameObject player;
+        [SerializeField] private GameObject enemy;
+        [SerializeField] private GameObject goal;
+        [SerializeField] private BoardData boardData;
 
-    public void SetBoardObject()
-    {
-        SetObject();
-        SetPlayer();
-        SetGoal();
-    }
-    private void SetObject()
-    {
-        for (int x = 0; x < boardData.BoardWidth; x++)
+        public void SetBoardObject()
         {
-            for (int y = 0; y < boardData.BoardHeight; y++)
+            SetObject();
+            SetPlayer();
+            SetGoal();
+        }
+        private void SetObject()
+        {
+            for (int x = 0; x < boardData.BoardWidth; x++)
             {
-                if (boardData.Board[x, y] == 1)//floor
+                for (int y = 0; y < boardData.BoardHeight; y++)
                 {
-                    var f_index = Random.Range(0, floorObject.Length);
-                    Instantiate(floorObject[f_index], new Vector3(x, y, 0), Quaternion.identity);
-                }
-                else if (boardData.Board[x, y] == 2)//breakableWall
-                {
-                    var f_index = Random.Range(0, floorObject.Length);
-                    Instantiate(floorObject[f_index], new Vector3(x, y, 0), Quaternion.identity);
-                    var index = Random.Range(0, breakableWalls.Length);
-                    Instantiate(breakableWalls[index], new Vector3(x, y, 0), Quaternion.identity);
-                }
-                else if (boardData.Board[x, y] == 3)//enemy
-                {
-                    var f_index = Random.Range(0, floorObject.Length);
-                    Instantiate(floorObject[f_index], new Vector3(x, y, 0), Quaternion.identity);
-                    Instantiate(enemy, new Vector3(x, y, 0), Quaternion.identity);
-                }
-                else if (boardData.Board[x, y] == 0)
-                {
-                    Instantiate(wallObject, new Vector3(x, y, 0), Quaternion.identity);
+                    if (boardData.Board[x, y] == 1)//floor
+                    {
+                        var f_index = Random.Range(0, floorObject.Length);
+                        Instantiate(floorObject[f_index], new Vector3(x, y, 0), Quaternion.identity);
+                    }
+                    else if (boardData.Board[x, y] == 2)//breakableWall
+                    {
+                        var f_index = Random.Range(0, floorObject.Length);
+                        Instantiate(floorObject[f_index], new Vector3(x, y, 0), Quaternion.identity);
+                        var index = Random.Range(0, breakableWalls.Length);
+                        Instantiate(breakableWalls[index], new Vector3(x, y, 0), Quaternion.identity);
+                    }
+                    else if (boardData.Board[x, y] == 3)//enemy
+                    {
+                        var f_index = Random.Range(0, floorObject.Length);
+                        Instantiate(floorObject[f_index], new Vector3(x, y, 0), Quaternion.identity);
+                        Instantiate(enemy, new Vector3(x, y, 0), Quaternion.identity);
+                    }
+                    else if (boardData.Board[x, y] == 0)
+                    {
+                        Instantiate(wallObject, new Vector3(x, y, 0), Quaternion.identity);
+                    }
                 }
             }
         }
-    }
-    private void SetPlayer()
-    {
-        for (int x = 0; x < boardData.BoardWidth; x++)
+        private void SetPlayer()
         {
-            for (int y = 0; y < boardData.BoardHeight; y++)
+            for (int x = 0; x < boardData.BoardWidth; x++)
             {
-                //最初に見つけたfloorでプレイヤーを設置
-                if (boardData.Board[x, y] == 1)
+                for (int y = 0; y < boardData.BoardHeight; y++)
                 {
-                    Instantiate(player, new Vector3(x, y, 0), Quaternion.identity);
-                    return;
-                }
+                    //最初に見つけたfloorでプレイヤーを設置
+                    if (boardData.Board[x, y] == 1)
+                    {
+                        Instantiate(player, new Vector3(x, y, 0), Quaternion.identity);
+                        return;
+                    }
 
+                }
             }
         }
-    }
-    private void SetGoal()
-    {
-        for (int x = boardData.BoardWidth - 1; x > 0; x--)
+        private void SetGoal()
         {
-            for (int y = boardData.BoardHeight - 1; y > 0; y--)
+            for (int x = boardData.BoardWidth - 1; x > 0; x--)
             {
-                if (boardData.Board[x, y] == 1)
+                for (int y = boardData.BoardHeight - 1; y > 0; y--)
                 {
-                    Instantiate(goal, new Vector3(x, y, 0), Quaternion.identity);
-                    return;
-                }
+                    if (boardData.Board[x, y] == 1)
+                    {
+                        Instantiate(goal, new Vector3(x, y, 0), Quaternion.identity);
+                        return;
+                    }
 
+                }
             }
         }
     }
