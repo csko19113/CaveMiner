@@ -8,6 +8,7 @@ namespace Cave.Main.Enemy
         private STATE enemyState;
         private Vector3 target;
         [SerializeField] private EnemyMove enemyMove;
+        [SerializeField] private AStarArray aStarArray;
         private enum STATE
         {
             idle,

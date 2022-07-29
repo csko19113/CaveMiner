@@ -46,10 +46,7 @@ namespace Cave.Main.Enemy
 
         public int[,] Map;
 
-        public GameObject start;
-        public GameObject goal;
-        public GameObject road;
-        public GameObject block;
+        private Vector3 target;//ToDO:playerを検索しそのpositionを代入,動的に変化するので移動処理の度に更新
 
         [SerializeField] List<node> nodes;
         [SerializeField] List<node> routeNodes;
@@ -61,6 +58,7 @@ namespace Cave.Main.Enemy
         {
             nodes = new List<node>();//経路の探索用リスト
             routeNodes = new List<node>();//ノードの保管用リスト
+            target = GameObject.FindWithTag("Player").transform.position;//
             NodeSet(boardData.BoardWidth, boardData.BoardHeight);//ゴールノードの設定、全てのノードの情報を設定
             SearchStart();//最初のノードを設定
             Open(StartNode);
@@ -70,10 +68,6 @@ namespace Cave.Main.Enemy
         public void InputBoard()
         {
             Map = boardData.Board;
-        }
-        private void GoalNodeSet()
-        {
-
         }
         private void NodeSet(int mapWidth, int mapHeight)
         {
@@ -86,7 +80,7 @@ namespace Cave.Main.Enemy
                     Node.pos = new Vector3(x, y, 0);
 
 
-                    if (Node.type == 1) //ノードが壁の場合は無視
+                    if (Node.type != 0) //ノードが障害物の場合は無視
                     {
                         //Instantiate(block, Node.pos, Quaternion.identity);
                         continue;
@@ -99,10 +93,18 @@ namespace Cave.Main.Enemy
 
                     //Instantiate(road, Node.pos, Quaternion.identity);
 
+                    /*
                     if (Node.type == 6)//ノードがゴールの時ゴールノードにデータを代入
                     {
                         GoalNode = Node;
                         //Instantiate(goal, GoalNode.pos, Quaternion.identity);
+                        Debug.Log("GoalNodeは" + GoalNode.pos);
+                    }
+                    */
+                    //goalNodeをプレイヤーの位置から設定
+                    if (Node.pos == target)//ノードがゴールの時ゴールノードにデータを代入
+                    {
+                        GoalNode = Node;
                         Debug.Log("GoalNodeは" + GoalNode.pos);
                     }
                 }
@@ -176,7 +178,9 @@ namespace Cave.Main.Enemy
         private void OutputRoute()
         {
             routeList.Reverse();
-            routeList.ForEach(n => Debug.Log("=>" + n));
+            //routeList.ForEach(n => Debug.Log("=>" + n));
+            float x = routeList[0].x - StartNode.pos.x;
+            float y = routeList[0].y - StartNode.pos.y;
         }
     }
 }
