@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8896383514551622339}
   - component: {fileID: 8461063627686727317}
   - component: {fileID: 3448755567593478719}
+  - component: {fileID: 3103764366873126810}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
@@ -131,6 +132,7 @@ MonoBehaviour:
   boxcollider: {fileID: 3135194090408023567}
   audioSource: {fileID: 3448755567593478719}
   isMoving: 0
+  isAttack: 0
   brockingLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -163,6 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyMove: {fileID: -2901713080107198003}
+  aStarArray: {fileID: 3103764366873126810}
 --- !u!50 &8896383514551622339
 Rigidbody2D:
   serializedVersion: 4
@@ -299,3 +302,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3103764366873126810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4132952218842942379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48eb8a5a0e9beb84ba6a7ef86ee99d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boardData: {fileID: 11400000, guid: 43b6aed774858d24f9ec3aa30ed591ea, type: 2}

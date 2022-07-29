@@ -47,27 +47,32 @@ namespace Cave.Main.Enemy
                 return;
             }
         }
+        /*
+                private void MoveCautionEnemy()
+                {
+                    int xDir = 0;
+                    int yDir = 0;
+                    target = GameObject.FindWithTag("Player").transform.position;
+                    if (target.x != transform.position.x)
+                    {
+                        xDir = (target.x > transform.position.x) ? 1 : -1;
+                        enemyMove.AttemptMove<CharaController>(xDir, yDir);
+                        return;
+                    }
+                    else if (target.y != transform.position.y)
+                    {
+                        yDir = (target.y > transform.position.y) ? 1 : -1;
+                        enemyMove.AttemptMove<CharaController>(xDir, yDir);
+                        return;
+                    }
 
+                }
+        */
         private void MoveCautionEnemy()
         {
-            int xDir = 0;
-            int yDir = 0;
-            target = GameObject.FindWithTag("Player").transform.position;
-            if (target.x != transform.position.x)
-            {
-                xDir = (target.x > transform.position.x) ? 1 : -1;
-                enemyMove.AttemptMove<CharaController>(xDir, yDir);
-                return;
-            }
-            else if (target.y != transform.position.y)
-            {
-                yDir = (target.y > transform.position.y) ? 1 : -1;
-                enemyMove.AttemptMove<CharaController>(xDir, yDir);
-                return;
-            }
-
+            aStarArray.SearchRoad();
+            enemyMove.AttemptMove<CharaController>(aStarArray.xDir, aStarArray.yDir);
         }
-
         private STATE StateCheck()
         {
             target = GameObject.FindWithTag("Player").transform.position;

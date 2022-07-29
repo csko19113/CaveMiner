@@ -46,6 +46,8 @@ namespace Cave.Main.Enemy
 
         public int[,] Map;
 
+        public int xDir { get; private set; }
+        public int yDir { get; private set; }
         private Vector3 target;//ToDO:playerを検索しそのpositionを代入,動的に変化するので移動処理の度に更新
 
         [SerializeField] List<node> nodes;
@@ -56,6 +58,7 @@ namespace Cave.Main.Enemy
         //Mapの情報を読み取り、最適なルートの検索
         public void SearchRoad()
         {
+            Map = boardData.Board;//Mapの更新
             nodes = new List<node>();//経路の探索用リスト
             routeNodes = new List<node>();//ノードの保管用リスト
             target = GameObject.FindWithTag("Player").transform.position;//
@@ -63,11 +66,6 @@ namespace Cave.Main.Enemy
             SearchStart();//最初のノードを設定
             Open(StartNode);
             OutputRoute();
-        }
-        //Mapの更新
-        public void InputBoard()
-        {
-            Map = boardData.Board;
         }
         private void NodeSet(int mapWidth, int mapHeight)
         {
@@ -115,7 +113,8 @@ namespace Cave.Main.Enemy
         {
             //スタートノードを検索
             //StartNode = routeNodes.First(n => n.type == 5);
-            StartNode = routeNodes.First(n => n.pos == gameObject.transform.position);//
+            StartNode = routeNodes.First(n => n.pos == gameObject.transform.position);
+            //enemyは障害物なのでrouteNodesには入ってない
 
             StartNode.cost = 0;
             StartNode.isOpen = node.status.open;
@@ -179,8 +178,8 @@ namespace Cave.Main.Enemy
         {
             routeList.Reverse();
             //routeList.ForEach(n => Debug.Log("=>" + n));
-            float x = routeList[0].x - StartNode.pos.x;
-            float y = routeList[0].y - StartNode.pos.y;
+            xDir = (int)(routeList[0].x - StartNode.pos.x);
+            yDir = (int)(routeList[0].y - StartNode.pos.y);
         }
     }
 }
