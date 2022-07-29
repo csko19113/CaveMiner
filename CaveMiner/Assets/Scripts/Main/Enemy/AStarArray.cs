@@ -23,11 +23,10 @@ namespace Cave.Main.Enemy
         public status isOpen { get; set; }//訪問済みのフラグ
     }
 
+    //各enemyにアタッチする
     public class AStarArray : MonoBehaviour
     {
         [SerializeField] private BoardData boardData;
-        private int mapWidth = 8;
-        private int mapHeight = 8;
 
         private bool endFlag = false;
         //簡易的なマップ  1:壁 0:道 5:スタート 6:ゴール
@@ -57,19 +56,24 @@ namespace Cave.Main.Enemy
         List<Vector3> routeList = new List<Vector3>();
         node StartNode = new node();
         node GoalNode = new node();
-        private void Start()
+        //Mapの情報を読み取り、最適なルートの検索
+        public void SearchRoad()
         {
             nodes = new List<node>();//経路の探索用リスト
             routeNodes = new List<node>();//ノードの保管用リスト
-            NodeSet(mapWidth, mapHeight);//ゴールノードの設定、全てのノードの情報を設定
+            NodeSet(boardData.BoardWidth, boardData.BoardHeight);//ゴールノードの設定、全てのノードの情報を設定
             SearchStart();//最初のノードを設定
             Open(StartNode);
             OutputRoute();
         }
-
+        //Mapの更新
         public void InputBoard()
         {
             Map = boardData.Board;
+        }
+        private void GoalNodeSet()
+        {
+
         }
         private void NodeSet(int mapWidth, int mapHeight)
         {
@@ -80,21 +84,25 @@ namespace Cave.Main.Enemy
                     node Node = new node();
                     Node.type = Map[x, y];
                     Node.pos = new Vector3(x, y, 0);
+
+
                     if (Node.type == 1) //ノードが壁の場合は無視
                     {
-                        Instantiate(block, Node.pos, Quaternion.identity);
+                        //Instantiate(block, Node.pos, Quaternion.identity);
                         continue;
                     }
+
 
                     //                Node.pos = new Vector3(x, y, 0);
                     Node.isOpen = node.status.none;
                     routeNodes.Add(Node);
-                    Instantiate(road, Node.pos, Quaternion.identity);
+
+                    //Instantiate(road, Node.pos, Quaternion.identity);
 
                     if (Node.type == 6)//ノードがゴールの時ゴールノードにデータを代入
                     {
                         GoalNode = Node;
-                        Instantiate(goal, GoalNode.pos, Quaternion.identity);
+                        //Instantiate(goal, GoalNode.pos, Quaternion.identity);
                         Debug.Log("GoalNodeは" + GoalNode.pos);
                     }
                 }
@@ -104,11 +112,13 @@ namespace Cave.Main.Enemy
         private void SearchStart()
         {
             //スタートノードを検索
-            StartNode = routeNodes.First(n => n.type == 5);
+            //StartNode = routeNodes.First(n => n.type == 5);
+            StartNode = routeNodes.First(n => n.pos == gameObject.transform.position);//
+
             StartNode.cost = 0;
             StartNode.isOpen = node.status.open;
             nodes.Add(StartNode);
-            Instantiate(start, StartNode.pos, Quaternion.identity);
+            //Instantiate(start, StartNode.pos, Quaternion.identity);
             Debug.Log("StartNodeは" + StartNode.pos);
         }
 

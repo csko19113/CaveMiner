@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "BoardData", menuName = "ScriptableObjects/CreateBoard")]
 public class BoardData : ScriptableObject
 {
-    public int[,] Board;//0:wall,1:floor,2:breakableWall,3:enemy
+    public int[,] Board;//0:wall,1:floor,2:breakableWall,3:enemy.0以外は通れない
     [SerializeField] private int boardWidth = 50;
     [SerializeField] private int boardHeight = 50;
     [SerializeField] private int roomPadding = 5;

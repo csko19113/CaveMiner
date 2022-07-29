@@ -10,12 +10,12 @@ namespace Cave.Main.Board
         [SerializeField] private SetBoard setBoard;
         [SerializeField] private ReserMap reserMap;
         [SerializeField] private CreateDangeon createDangeon;
-        [SerializeField] private AStarArray aStarArray;
+        //[SerializeField] private AStarArray aStarArray;
         public void Create()
         {
             Debug.Log("Create");
             reserMap.ResetMap();
-            aStarArray.InputBoard();
+            //aStarArray.InputBoard();
             createDangeon.CreateRoom();
             setBoard.SetBoardObject();
         }
