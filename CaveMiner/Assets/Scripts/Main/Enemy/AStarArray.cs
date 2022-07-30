@@ -69,6 +69,13 @@ namespace Cave.Main.Enemy
         }
         private void NodeSet(int mapWidth, int mapHeight)
         {
+            //自身がいる位置のノードをセット
+            node selfNode = new node();
+            selfNode.type = 0;
+            selfNode.pos = gameObject.transform.position;
+            selfNode.isOpen = node.status.none;
+            routeNodes.Add(selfNode);
+
             for (int x = 0; x < mapWidth; x++)
             {
                 for (int y = 0; y < mapHeight; y++)
@@ -78,7 +85,7 @@ namespace Cave.Main.Enemy
                     Node.pos = new Vector3(x, y, 0);
 
 
-                    if (Node.type != 0) //ノードが障害物の場合は無視
+                    if (Node.type != 1) //ノードが障害物の場合は無視
                     {
                         //Instantiate(block, Node.pos, Quaternion.identity);
                         continue;
@@ -158,7 +165,7 @@ namespace Cave.Main.Enemy
                 }
             }
             node newcenterNode = nodes.Where(n => n.isOpen == node.status.open).OrderBy(n => n.sumCost).FirstOrDefault();
-            newcenterNode.isOpen = node.status.closed;
+            newcenterNode.isOpen = node.status.closed;//null
             //nodeリスト内の実コストが最小のノードで再び周りをオープン
             Open(newcenterNode);
         }
