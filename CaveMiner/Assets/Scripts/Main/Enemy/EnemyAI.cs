@@ -82,7 +82,7 @@ namespace Cave.Main.Enemy
             target = GameObject.FindWithTag("Player").transform.position;
             float direction = (transform.position - target).sqrMagnitude;
 
-            if (direction <= 9)
+            if (direction <= 25)
             {
                 return STATE.caution;
             }

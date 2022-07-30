@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System;
+using Cave.Main.Chara;
 
 namespace Cave.Main.Enemy
 {
@@ -52,13 +53,14 @@ namespace Cave.Main.Enemy
 
         [SerializeField] List<node> nodes;
         [SerializeField] List<node> routeNodes;
-        List<Vector3> routeList = new List<Vector3>();
+        [SerializeField] List<Vector3> routeList = new List<Vector3>();
         node StartNode = new node();
         node GoalNode = new node();
         //Mapの情報を読み取り、最適なルートの検索
         public void SearchRoad()
         {
             Map = boardData.Board;//Mapの更新
+            //routeList = new List<Vector3>();//最短経路の座標を保存するリスト
             nodes = new List<node>();//経路の探索用リスト
             routeNodes = new List<node>();//ノードの保管用リスト
             target = GameObject.FindWithTag("Player").transform.position;//
@@ -185,9 +187,10 @@ namespace Cave.Main.Enemy
         private void OutputRoute()
         {
             routeList.Reverse();
-            //routeList.ForEach(n => Debug.Log("=>" + n));
+            routeList.ForEach(n => Debug.Log("=>" + n));
             xDir = (int)(routeList[0].x - StartNode.pos.x);
             yDir = (int)(routeList[0].y - StartNode.pos.y);
+            routeList.Clear();
         }
     }
 }

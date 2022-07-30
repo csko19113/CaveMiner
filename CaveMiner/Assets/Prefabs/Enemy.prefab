@@ -315,3 +315,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boardData: {fileID: 11400000, guid: 43b6aed774858d24f9ec3aa30ed591ea, type: 2}
+  enemyMove: {fileID: -2901713080107198003}
+  routeList: []
