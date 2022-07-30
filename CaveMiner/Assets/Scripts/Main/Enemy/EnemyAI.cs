@@ -70,6 +70,10 @@ namespace Cave.Main.Enemy
         */
         private void MoveCautionEnemy()
         {
+            if (transform.position.x != (int)transform.position.x || transform.position.y != (int)transform.position.y)
+            {
+                return;
+            }
             aStarArray.SearchRoad();
             enemyMove.AttemptMove<CharaController>(aStarArray.xDir, aStarArray.yDir);
         }

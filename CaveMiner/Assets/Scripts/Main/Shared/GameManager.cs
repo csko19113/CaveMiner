@@ -73,11 +73,5 @@ namespace Cave.Main.Shared
                 Debug.Log("GameOver");
             }
         }
-        /*
-        private void UpdateLimitSecond()
-        {
-            limitText.text = gameParam.second + " 秒";
-        }
-        */
     }
 }

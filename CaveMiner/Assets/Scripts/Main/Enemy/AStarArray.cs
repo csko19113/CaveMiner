@@ -165,6 +165,7 @@ namespace Cave.Main.Enemy
                 }
             }
             node newcenterNode = nodes.Where(n => n.isOpen == node.status.open).OrderBy(n => n.sumCost).FirstOrDefault();
+            Debug.Log(newcenterNode);
             newcenterNode.isOpen = node.status.closed;//null
             //nodeリスト内の実コストが最小のノードで再び周りをオープン
             Open(newcenterNode);
