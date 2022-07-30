@@ -49,18 +49,18 @@ namespace Cave.Main.Enemy
 
         public int xDir { get; private set; }
         public int yDir { get; private set; }
-        private Vector3 target;//ToDO:playerを検索しそのpositionを代入,動的に変化するので移動処理の度に更新
+        private Vector3 target;
 
         [SerializeField] List<node> nodes;
         [SerializeField] List<node> routeNodes;
-        [SerializeField] List<Vector3> routeList = new List<Vector3>();
+        [SerializeField] List<Vector3> routeList;
         node StartNode = new node();
         node GoalNode = new node();
         //Mapの情報を読み取り、最適なルートの検索
         public void SearchRoad()
         {
             Map = boardData.Board;//Mapの更新
-            //routeList = new List<Vector3>();//最短経路の座標を保存するリスト
+            routeList = new List<Vector3>();//最短経路の座標を保存するリスト
             nodes = new List<node>();//経路の探索用リスト
             routeNodes = new List<node>();//ノードの保管用リスト
             target = GameObject.FindWithTag("Player").transform.position;//
@@ -167,8 +167,7 @@ namespace Cave.Main.Enemy
                 }
             }
             node newcenterNode = nodes.Where(n => n.isOpen == node.status.open).OrderBy(n => n.sumCost).FirstOrDefault();
-            Debug.Log(newcenterNode);
-            newcenterNode.isOpen = node.status.closed;//null
+            newcenterNode.isOpen = node.status.closed;
             //nodeリスト内の実コストが最小のノードで再び周りをオープン
             Open(newcenterNode);
         }
@@ -191,6 +190,7 @@ namespace Cave.Main.Enemy
             xDir = (int)(routeList[0].x - StartNode.pos.x);
             yDir = (int)(routeList[0].y - StartNode.pos.y);
             routeList.Clear();
+            endFlag = false;
         }
     }
 }
