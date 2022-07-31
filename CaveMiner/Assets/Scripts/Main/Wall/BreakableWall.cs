@@ -7,9 +7,9 @@ using Cave.Main.Shared;
 public class BreakableWall : MonoBehaviour
 {
     [SerializeField] private int hp;
-    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private BoardData boardData;
     [SerializeField] private WallType wallType;
-    [SerializeField] private ScoreManager scoreManager;
+    private ScoreManager scoreManager;
 
     private void Awake()
     {
@@ -31,6 +31,7 @@ public class BreakableWall : MonoBehaviour
         if (this.hp <= 0)
         {
             this.gameObject.SetActive(false);
+            boardData.UpdateObjPos(gameObject.transform);
             scoreManager.wallBreakedCallback.Invoke(wallType.WallPoint);
         }
     }

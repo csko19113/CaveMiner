@@ -123,6 +123,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
-  spriteRenderer: {fileID: 0}
+  boardData: {fileID: 11400000, guid: 43b6aed774858d24f9ec3aa30ed591ea, type: 2}
   wallType: {fileID: 11400000, guid: 768a38ac3f83bb049b1cf16cc2a39c8c, type: 2}
   scoreManager: {fileID: 0}

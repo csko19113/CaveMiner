@@ -24,4 +24,9 @@ public class BoardData : ScriptableObject
     public int RoomLengthMax => roomLengthMax;
     public int ItemCountMax => itemCountMax;
     public int ItemCountMin => itemCountMin;
+
+    public void UpdateObjPos(Transform objPosition)
+    {
+        Board[(int)objPosition.position.x, (int)objPosition.position.y] = 1;
+    }
 }
