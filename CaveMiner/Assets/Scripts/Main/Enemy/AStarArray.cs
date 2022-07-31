@@ -87,32 +87,18 @@ namespace Cave.Main.Enemy
                     Node.pos = new Vector3(x, y, 0);
 
 
-                    if (Node.type != 1) //ノードが障害物の場合は無視
+                    if (Node.type == 1 || Node.type == 3) //ノードが障害物の場合は無視
                     {
-                        //Instantiate(block, Node.pos, Quaternion.identity);
-                        continue;
-                    }
+                        Node.isOpen = node.status.none;
+                        routeNodes.Add(Node);
 
 
-                    //                Node.pos = new Vector3(x, y, 0);
-                    Node.isOpen = node.status.none;
-                    routeNodes.Add(Node);
-
-                    //Instantiate(road, Node.pos, Quaternion.identity);
-
-                    /*
-                    if (Node.type == 6)//ノードがゴールの時ゴールノードにデータを代入
-                    {
-                        GoalNode = Node;
-                        //Instantiate(goal, GoalNode.pos, Quaternion.identity);
-                        Debug.Log("GoalNodeは" + GoalNode.pos);
-                    }
-                    */
-                    //goalNodeをプレイヤーの位置から設定
-                    if (Node.pos == target)//ノードがゴールの時ゴールノードにデータを代入
-                    {
-                        GoalNode = Node;
-                        Debug.Log("GoalNodeは" + GoalNode.pos);
+                        //goalNodeをプレイヤーの位置から設定
+                        if (Node.pos == target)//ノードがゴールの時ゴールノードにデータを代入
+                        {
+                            GoalNode = Node;
+                            Debug.Log("GoalNodeは" + GoalNode.pos);
+                        }
                     }
                 }
             }
