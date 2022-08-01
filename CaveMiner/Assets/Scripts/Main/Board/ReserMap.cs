@@ -1,16 +1,19 @@
 using UnityEngine;
-//Mapのリセットクラス
-public class ReserMap : MonoBehaviour
+
+namespace Cave.Main.Board
 {
-    [SerializeField] private BoardData boardData;
-    public void ResetMap()
+    public class ReserMap : MonoBehaviour
     {
-        boardData.Board = new int[boardData.BoardWidth, boardData.BoardHeight];
-        for (int i = 0; i < boardData.BoardWidth; i++)
+        [SerializeField] private BoardData boardData;
+        public void ResetMap()
         {
-            for (int j = 0; j < boardData.BoardHeight; j++)
+            boardData.Board = new int[boardData.BoardWidth, boardData.BoardHeight];
+            for (int i = 0; i < boardData.BoardWidth; i++)
             {
-                boardData.Board[i, j] = 0;
+                for (int j = 0; j < boardData.BoardHeight; j++)
+                {
+                    boardData.Board[i, j] = 0;
+                }
             }
         }
     }

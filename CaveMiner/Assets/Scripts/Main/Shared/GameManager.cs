@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Events;
 using Cave.Main.Board;
-using Cave.Main.Chara;
 using Cave.Main.Enemy;
 using Cave.Common;
 using Cysharp.Threading.Tasks;
@@ -17,7 +15,6 @@ namespace Cave.Main.Shared
         public static GameManager instance;
         public static List<int> scoreList = new List<int>();
         public static bool isMoving;//任意のオブジェクトが動いているか
-        public event UnityAction<int> enemyMoveAction;
         public UnityAction goalCallback;
         public List<EnemyController> enemies = new List<EnemyController>();
         [SerializeField] private bool playerTurn;

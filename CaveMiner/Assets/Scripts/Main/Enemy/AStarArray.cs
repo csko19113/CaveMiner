@@ -23,7 +23,6 @@ namespace Cave.Main.Enemy
         public status isOpen { get; set; }//訪問済みのフラグ
     }
 
-    //各enemyにアタッチする
     public class AStarArray : MonoBehaviour
     {
         [SerializeField] private BoardData boardData;
@@ -83,7 +82,6 @@ namespace Cave.Main.Enemy
                         if (Node.pos == target)//ノードがゴールの時ゴールノードにデータを代入
                         {
                             GoalNode = Node;
-                            Debug.Log("GoalNodeは" + GoalNode.pos);
                         }
                     }
                 }
@@ -94,12 +92,10 @@ namespace Cave.Main.Enemy
         {
             //スタートノードを検索
             StartNode = routeNodes.First(n => n.pos == gameObject.transform.position);
-            //enemyは障害物なのでrouteNodesには入ってない
 
             StartNode.cost = 0;
             StartNode.isOpen = node.status.open;
             nodes.Add(StartNode);
-            Debug.Log("StartNodeは" + StartNode.pos);
         }
 
         private void Open(node centerNode)
@@ -165,7 +161,6 @@ namespace Cave.Main.Enemy
                 return;
             }
             routeList.Reverse();
-            routeList.ForEach(n => Debug.Log("=>" + n));
             xDir = (int)(routeList[0].x - StartNode.pos.x);
             yDir = (int)(routeList[0].y - StartNode.pos.y);
             routeList.Clear();

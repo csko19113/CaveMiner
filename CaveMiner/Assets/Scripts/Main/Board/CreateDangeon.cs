@@ -95,7 +95,6 @@ namespace Cave.Main.Board
             int count = 0;
             while (count < itemCount)
             {
-                //道を塞がないように1開ける
                 int x = Random.Range(roomStartX + 1, roomStartX + roomWidth - 1);
                 int y = Random.Range(roomStartY + 1, roomStartY + roomHeight - 1);
                 if (boardData.Board[x, y] == 1)
