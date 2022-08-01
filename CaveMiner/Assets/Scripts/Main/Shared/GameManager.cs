@@ -17,7 +17,6 @@ namespace Cave.Main.Shared
         public static bool isMoving;//任意のオブジェクトが動いているか
         public UnityAction goalCallback;
         public List<EnemyController> enemies = new List<EnemyController>();
-        [SerializeField] private bool playerTurn;
         [SerializeField] private BoardManager boardManager;
         [SerializeField] private GameParam gameParam;
         [SerializeField] private string scoreKey;
@@ -34,7 +33,6 @@ namespace Cave.Main.Shared
                 Destroy(this.gameObject);
             }
             gameParam.ResetSecond();
-            playerTurn = gameParam.playerTurn;
             isMoving = false;
 
             boardManager = GameObject.FindGameObjectWithTag("BoardManager").GetComponent<BoardManager>();

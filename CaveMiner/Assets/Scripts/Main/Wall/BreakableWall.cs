@@ -19,12 +19,6 @@ namespace Cave.Main.Wall
             scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();
         }
 
-        private enum WALLTYPE
-        {
-            Emerald = 500,
-            Amethyst = 800,
-            Sapphire = 1000
-        }
 
         public void AttackWall(int dmg)
         {

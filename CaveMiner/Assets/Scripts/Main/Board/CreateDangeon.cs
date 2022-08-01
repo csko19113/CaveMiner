@@ -8,7 +8,7 @@ namespace Cave.Main.Board
         public void CreateRoom()
         {
             int enemyCount = 1;//部屋当たりの敵の数
-            int roomCount = Random.Range(boardData.RoomCountMin, boardData.RoomCountMin);
+            int roomCount = Random.Range(boardData.RoomCountMin, boardData.RoomCountMax);
 
             int GrobalRoadPointX = Random.Range(boardData.BoardWidth / 4, boardData.BoardHeight * 3 / 4);
             int GrobalRoadPointY = Random.Range(boardData.BoardWidth / 4, boardData.BoardHeight * 3 / 4);
