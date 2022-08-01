@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System;
-using Cave.Main.Chara;
 
 namespace Cave.Main.Enemy
 {
@@ -30,20 +29,6 @@ namespace Cave.Main.Enemy
         [SerializeField] private BoardData boardData;
 
         private bool endFlag = false;
-        //簡易的なマップ  1:壁 0:道 5:スタート 6:ゴール
-
-        /*
-        public int[,] Map = new int[8, 8] {
-        {1,1,1,1,1,1,0,6 },
-        {0,0,0,0,0,0,0,0 },
-        {0,0,1,1,0,1,1,0 },
-        {0,0,0,0,1,0,0,0 },
-        {0,0,0,0,1,0,1,0 },
-        {1,1,1,0,0,0,0,1 },
-        {0,0,0,0,0,0,1,0 },
-        {5,0,0,0,0,0,0,0 }
-        };
-        */
 
         public int[,] Map;
 
@@ -56,6 +41,7 @@ namespace Cave.Main.Enemy
         [SerializeField] List<Vector3> routeList;
         node StartNode = new node();
         node GoalNode = new node();
+
         //Mapの情報を読み取り、最適なルートの検索
         public void SearchRoad()
         {
@@ -107,14 +93,12 @@ namespace Cave.Main.Enemy
         private void SearchStart()
         {
             //スタートノードを検索
-            //StartNode = routeNodes.First(n => n.type == 5);
             StartNode = routeNodes.First(n => n.pos == gameObject.transform.position);
             //enemyは障害物なのでrouteNodesには入ってない
 
             StartNode.cost = 0;
             StartNode.isOpen = node.status.open;
             nodes.Add(StartNode);
-            //Instantiate(start, StartNode.pos, Quaternion.identity);
             Debug.Log("StartNodeは" + StartNode.pos);
         }
 
@@ -134,13 +118,12 @@ namespace Cave.Main.Enemy
                         }
                         //ノードの制作、リストへの保存
                         node node = routeNodes.Where(n => n.pos == pos).First();//条件と一致するノードの取り出し
-                                                                                //node node = routeNodes.FirstOrDefault(n => n.pos == pos);
                         node.cost = centerNode.cost++;
                         node.heurisitic = Math.Abs(GoalNode.pos.x - node.pos.x) + Math.Abs(GoalNode.pos.y - node.pos.y);//適切なヒューリスティックの設定
                         node.sumCost = node.cost + node.heurisitic;
                         node.parent = centerNode.pos;
                         node.isOpen = node.status.open;//オープン済み
-                                                       //最後に経路用のリストに代入
+                        //最後に経路用のリストに代入
                         nodes.Add(node);
 
                         GoalCheck(node);
@@ -153,6 +136,12 @@ namespace Cave.Main.Enemy
                 }
             }
             node newcenterNode = nodes.Where(n => n.isOpen == node.status.open).OrderBy(n => n.sumCost).FirstOrDefault();
+            //現在地からゴールまでたどり着けない時
+            if (newcenterNode == null)
+            {
+                return;
+            }
+
             newcenterNode.isOpen = node.status.closed;
             //nodeリスト内の実コストが最小のノードで再び周りをオープン
             Open(newcenterNode);
@@ -171,6 +160,10 @@ namespace Cave.Main.Enemy
         }
         private void OutputRoute()
         {
+            if (routeList.Count == 0)
+            {
+                return;
+            }
             routeList.Reverse();
             routeList.ForEach(n => Debug.Log("=>" + n));
             xDir = (int)(routeList[0].x - StartNode.pos.x);
