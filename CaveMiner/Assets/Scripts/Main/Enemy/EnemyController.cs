@@ -9,7 +9,6 @@ namespace Cave.Main.Enemy
     {
         public bool IsMoving => isMoving;
         [SerializeField] private EnemyAI enemyAI;
-        [SerializeField] private GameParam gameParam;
         [SerializeField] private bool isMoving = false;
         private void Awake()
         {
