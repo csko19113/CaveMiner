@@ -23,7 +23,7 @@ namespace Cave.Main.Enemy
         public status isOpen { get; set; }//–K–âÏ‚İ‚Ìƒtƒ‰ƒO
     }
 
-    public class AStarArray : MonoBehaviour
+    public class AStar : MonoBehaviour
     {
         [SerializeField] private BoardData boardData;
 

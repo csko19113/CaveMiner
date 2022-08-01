@@ -150,7 +150,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAI: {fileID: -8585875398906924770}
-  gameParam: {fileID: 11400000, guid: 89f4c0c8997973a4d90973b21467d83e, type: 2}
   isMoving: 0
 --- !u!114 &-8585875398906924770
 MonoBehaviour:
@@ -165,8 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyMove: {fileID: -2901713080107198003}
-  aStarArray: {fileID: 3103764366873126810}
-  boardData: {fileID: 11400000, guid: 43b6aed774858d24f9ec3aa30ed591ea, type: 2}
+  aStar: {fileID: 3103764366873126810}
 --- !u!50 &8896383514551622339
 Rigidbody2D:
   serializedVersion: 4

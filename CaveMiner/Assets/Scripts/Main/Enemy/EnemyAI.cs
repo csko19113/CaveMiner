@@ -8,7 +8,7 @@ namespace Cave.Main.Enemy
         private STATE enemyState;
         private Vector3 target;
         [SerializeField] private EnemyMove enemyMove;
-        [SerializeField] private AStarArray aStarArray;
+        [SerializeField] private AStar aStar;
         private enum STATE
         {
             idle,
@@ -53,8 +53,8 @@ namespace Cave.Main.Enemy
             {
                 return;
             }
-            aStarArray.SearchRoad();
-            enemyMove.AttemptMove<CharaController>(aStarArray.xDir, aStarArray.yDir);
+            aStar.SearchRoad();
+            enemyMove.AttemptMove<CharaController>(aStar.xDir, aStar.yDir);
         }
         private STATE StateCheck()
         {
