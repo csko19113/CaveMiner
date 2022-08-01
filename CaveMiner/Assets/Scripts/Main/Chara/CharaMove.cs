@@ -1,6 +1,8 @@
 using UnityEngine;
 using Cave.Main.UI;
 using Cysharp.Threading.Tasks;
+using Cave.Main.Wall;
+
 namespace Cave.Main.Chara
 {
     public class CharaMove : MonoBehaviour, IMove
@@ -55,7 +57,6 @@ namespace Cave.Main.Chara
             gameParam.playerTurn = false;
             isMoving = false;
             gameParam.second--;
-            //gameParam.turnChangeCallBack.Invoke();
         }
         public void MoveCheck(int xDir, int yDir, out RaycastHit2D hit)
         {

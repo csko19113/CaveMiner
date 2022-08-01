@@ -1,6 +1,7 @@
 using UnityEngine;
 using Cave.Main.Shared;
 using Cysharp.Threading.Tasks;
+using Cave.Main.Wall;
 
 namespace Cave.Main.Chara
 {
